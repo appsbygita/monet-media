@@ -20,6 +20,7 @@ export const HeroSection = styled.div`
 export const Content = styled.div`
   width: 80%;
   margin: 0 auto;
+  padding: 40px 0;
 `;
 
 export const Header = styled.div`
