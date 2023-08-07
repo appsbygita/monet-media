@@ -31,4 +31,8 @@ export const Paragraph = styled.p`
   font-size: 1.5rem;
   font-weight: 400;
   color: #999999;
+
+  & center {
+    text-align: center;
+  }
 `;

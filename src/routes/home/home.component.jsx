@@ -11,6 +11,9 @@ import {
   SectionTitle,
   Column,
   Row,
+  PartnerLogo,
+  DarkerSection,
+  FooterMenu,
 } from "./home.styles";
 import {
   TitleText,
@@ -20,6 +23,7 @@ import {
 import { Spacer } from "../../components/spacer/spacer.styles";
 
 import DefaultImage from "../../assets/placeholder_image.svg";
+import Cur8Logo from "../../assets/logo/cur8.png";
 
 export const Home = () => {
   return (
@@ -103,13 +107,51 @@ export const Home = () => {
           <SectionTitle>
             <n>02.</n> <t>Our Ecosystem</t>
           </SectionTitle>
-          <ContentText>
-            <b>Industry Partner</b>
-          </ContentText>
-          <Paragraph>
-            Collaborates with other businesses within the digital ecosystem to
-            provide specialized products, services, or expertise.
-          </Paragraph>
+          <CenterDiv>
+            <ContentText>
+              <b>Industry Partner</b>
+            </ContentText>
+            <Paragraph>
+              <center>
+                Collaborates with other businesses within the digital ecosystem
+                to provide specialized products, services, or expertise.
+              </center>
+            </Paragraph>
+            <Row>
+              <a href="https://www.cur8labs.io/">
+                <PartnerLogo src={Cur8Logo} />
+              </a>
+              <a href="https://www.cur8labs.io/">
+                <PartnerLogo src={Cur8Logo} />
+              </a>
+              <a href="https://www.cur8labs.io/">
+                <PartnerLogo src={Cur8Logo} />
+              </a>
+              <a href="https://www.cur8labs.io/">
+                <PartnerLogo src={Cur8Logo} />
+              </a>
+              <a href="https://www.cur8labs.io/">
+                <PartnerLogo src={Cur8Logo} />
+              </a>
+            </Row>
+            <Row>
+              <a href="https://www.cur8labs.io/">
+                <PartnerLogo src={Cur8Logo} />
+              </a>
+              <a href="https://www.cur8labs.io/">
+                <PartnerLogo src={Cur8Logo} />
+              </a>
+              <a href="https://www.cur8labs.io/">
+                <PartnerLogo src={Cur8Logo} />
+              </a>
+              <a href="https://www.cur8labs.io/">
+                <PartnerLogo src={Cur8Logo} />
+              </a>
+              <a href="https://www.cur8labs.io/">
+                <PartnerLogo src={Cur8Logo} />
+              </a>
+            </Row>
+          </CenterDiv>
         </Content>
       </LightSection>
 
@@ -146,6 +188,42 @@ export const Home = () => {
             </Paragraph>
             <Button>Start earning with your art today</Button>
           </Column>
+        </Content>
+      </DarkSection>
+
+      <DarkerSection>
+        <Content>
+          <Column>
+            <ContentText>
+              <b>Explore</b> the content creators to get <b>Inspired</b>
+            </ContentText>
+          </Column>
+        </Content>
+      </DarkerSection>
+
+      <DarkSection>
+        <Content>
+          <Header>
+            <span>Logo</span>
+            <FooterMenu>
+              <a className="a1" href="#">
+                PRIVACY POLICY
+              </a>
+              <a className="a1" href="#">
+                TERM OF USE
+              </a>
+              <p>Connect With Us</p>
+              <a className="a2" href="#">
+                LinkedIn
+              </a>
+              <a className="a2" href="#">
+                Instagram
+              </a>
+              <a className="a2" href="#">
+                info@MonetMedia.com
+              </a>
+            </FooterMenu>
+          </Header>
         </Content>
       </DarkSection>
     </div>

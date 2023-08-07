@@ -1,7 +1,12 @@
 import { styled } from "styled-components";
+import HeroBg from "../../assets/hero-bg.jpeg";
 
 export const DarkSection = styled.div`
   background: #212121;
+`;
+
+export const DarkerSection = styled.div`
+  background: #151515;
 `;
 
 export const LightSection = styled.div`
@@ -13,7 +18,10 @@ export const HeroSection = styled.div`
   flex-direction: column;
   width: 100%;
   height: 100vh;
-  background: #3c3747;
+  background-image: url(${HeroBg});
+  background-color: lightgray 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
   align-items: center;
 `;
 
@@ -42,6 +50,28 @@ export const Column = styled.div`
   flex-direction: column;
 `;
 
+export const FooterMenu = styled.div`
+  display: flex;
+  width: 30%;
+  flex-direction: column;
+  font-family: "Unbounded", cursive;
+  color: #d2f950;
+  padding-bottom: 100px;
+  font-weight: 800;
+
+  & a.a1 {
+    color: #d2f950;
+    font-weight: 800;
+    text-decoration: none;
+  }
+
+  & a.a2 {
+    color: #aaa;
+    font-weight: 300;
+    text-decoration: none;
+  }
+`;
+
 export const Row = styled.div`
   display: flex;
   flex-direction: row;
@@ -56,6 +86,7 @@ export const HomeTitle = styled.div`
 export const MenuButton = styled.button`
   width: 6rem;
   height: 6rem;
+  border-width: 0;
   border-radius: 50%;
   background: #d2f950;
   font-family: "Unbounded", cursive;
@@ -74,7 +105,7 @@ export const Button = styled.button`
   padding: 0.2rem;
   color: #888;
   font-family: "Montserrat", sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 
   &:hover {
     background-color: #d2f950;
@@ -100,4 +131,10 @@ export const SectionTitle = styled.div`
   & t {
     color: #d2f950;
   }
+`;
+
+export const PartnerLogo = styled.img`
+  width: 150px;
+  height: 150px;
+  margin: 0 30px;
 `;
