@@ -13,7 +13,6 @@ export const DarkSection = styled.div`
 
 export const DarkerSection = styled.div`
   background: #151515;
-  z-index: -999;
 `;
 
 export const LightSection = styled.div`
@@ -63,7 +62,6 @@ export const Content = styled.div`
   height: 100%;
   margin: 0 auto;
   padding: 40px 0;
-  z-index: -999;
 `;
 
 export const Header = styled.div`
