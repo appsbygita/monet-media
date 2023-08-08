@@ -22,10 +22,13 @@ import {
   Paragraph,
 } from "../../components/text/text.styles";
 import { Spacer } from "../../components/spacer/spacer.styles";
-import { CTAButton as Button } from "../../components/home/cta_button/ctabutton.component";
+import { CTAButton as Button } from "../../components/home/cta-button/cta-button.component";
+import { HomeImage } from "../../components/home/home-image/home-image.component";
 
 import DefaultImage from "../../assets/placeholder_image.svg";
 import { Logo } from "../../components/home/logo/logo.component";
+import HomeImgOne from "../../assets/image/home-img-1.png";
+import HomeImgTwo from "../../assets/image/home-img-2.jpeg";
 
 import Cur8Logo from "../../assets/logo/cur8.png";
 import SplashLogo from "../../assets/logo/splash.png";
@@ -83,11 +86,11 @@ export const Home = () => {
               </Paragraph>
               <Button>Express Your Interest</Button>
             </Column>
-            <img src={DefaultImage} width="40%" />
+            <HomeImage img={HomeImgOne} />
           </Row>
           <Spacer />
           <Row>
-            <img src={DefaultImage} width="40%" />
+            <HomeImage img={HomeImgTwo} />
             <Column>
               <ContentText>
                 Join us as we <b>reshape the future</b> of creative content,

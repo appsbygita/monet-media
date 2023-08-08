@@ -22,6 +22,7 @@ export const HeroSection = styled.div`
   background-size: cover;
   background-blend-mode: overlay;
   background-repeat: no-repeat;
+  background-position: center;
   align-items: center;
 `;
 
@@ -49,7 +50,7 @@ export const CenterDiv = styled.div`
 
 export const Column = styled.div`
   display: flex;
-  width: 60%;
+  width: 55%;
   flex-direction: column;
 `;
 
@@ -78,6 +79,7 @@ export const FooterMenu = styled.div`
 export const Row = styled.div`
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   padding: 30px 0;
 `;
 
