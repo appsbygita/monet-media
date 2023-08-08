@@ -25,8 +25,18 @@ import {
 import { Spacer } from "../../components/spacer/spacer.styles";
 
 import DefaultImage from "../../assets/placeholder_image.svg";
-import Cur8Logo from "../../assets/logo/cur8.png";
 import { Logo } from "../../components/home/logo/logo.component";
+
+import Cur8Logo from "../../assets/logo/cur8.png";
+import SplashLogo from "../../assets/logo/splash.png";
+import ArtbankLogo from "../../assets/logo/artbank.png";
+import BlockgenLogo from "../../assets/logo/blockgen.png";
+import CardanoCenterLogo from "../../assets/logo/cardanocenter.png";
+import ArtboardzLogo from "../../assets/logo/artboardz.png";
+import AfricaLogo from "../../assets/logo/africa.png";
+import CardaniaLogo from "../../assets/logo/cardania.png";
+import NiftyLogo from "../../assets/logo/nifty.png";
+import OmniLogo from "../../assets/logo/omni.png";
 
 export const Home = () => {
   return (
@@ -114,76 +124,108 @@ export const Home = () => {
               </center>
             </Paragraph>
             <LogoRow>
-              <a href="https://www.cur8labs.io/">
+              <a
+                href="https://www.cur8labs.io/"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <PartnerLogoContainer>
                   <PartnerLogo src={Cur8Logo} />
                   <name>Cur8</name>
                   <description>Display</description>
                 </PartnerLogoContainer>
               </a>
-              <a href="https://www.cur8labs.io/">
+              <a
+                href="https://www.splash.club/"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <PartnerLogoContainer>
-                  <PartnerLogo src={Cur8Logo} />
-                  <name>Cur8</name>
-                  <description>Display</description>
+                  <PartnerLogo src={SplashLogo} />
+                  <name>Splash</name>
+                  <description>Gaming</description>
                 </PartnerLogoContainer>
               </a>
-              <a href="https://www.cur8labs.io/">
+              <a
+                href="https://www.theartbank.io/"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <PartnerLogoContainer>
-                  <PartnerLogo src={Cur8Logo} />
-                  <name>Cur8</name>
-                  <description>Display</description>
+                  <PartnerLogo src={ArtbankLogo} />
+                  <name>The Art Bank</name>
+                  <description>Art Promotion</description>
                 </PartnerLogoContainer>
               </a>
-              <a href="https://www.cur8labs.io/">
+              <a
+                href="https://www.blockgen.art/"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <PartnerLogoContainer>
-                  <PartnerLogo src={Cur8Logo} />
-                  <name>Cur8</name>
-                  <description>Display</description>
+                  <PartnerLogo src={BlockgenLogo} />
+                  <name>Blockgen</name>
+                  <description>Algorithmic NFTs</description>
                 </PartnerLogoContainer>
               </a>
-              <a href="https://www.cur8labs.io/">
+              <a
+                href="https://www.cardanocenters.io/"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <PartnerLogoContainer>
-                  <PartnerLogo src={Cur8Logo} />
-                  <name>Cur8</name>
-                  <description>Display</description>
+                  <PartnerLogo src={CardanoCenterLogo} />
+                  <name>Cardano Centers</name>
+                  <description>Cardano Outreach</description>
                 </PartnerLogoContainer>
               </a>
             </LogoRow>
             <LogoRow>
-              <a href="https://www.cur8labs.io/">
+              <a
+                href="http://www.artboardz.net/"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <PartnerLogoContainer>
-                  <PartnerLogo src={Cur8Logo} />
-                  <name>Cur8</name>
-                  <description>Display</description>
+                  <PartnerLogo src={ArtboardzLogo} />
+                  <name>Artboardz</name>
+                  <description>NFT Murals</description>
                 </PartnerLogoContainer>
               </a>
-              <a href="https://www.cur8labs.io/">
+              <a
+                href="https://www.africaonchain.io/"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <PartnerLogoContainer>
-                  <PartnerLogo src={Cur8Logo} />
-                  <name>Cur8</name>
-                  <description>Display</description>
+                  <PartnerLogo src={AfricaLogo} />
+                  <name>Africa On Chain</name>
+                  <description>Podcast</description>
                 </PartnerLogoContainer>
               </a>
-              <a href="https://www.cur8labs.io/">
+              <a href="https://cardania.com/" target="_blank" rel="noreferrer">
                 <PartnerLogoContainer>
-                  <PartnerLogo src={Cur8Logo} />
-                  <name>Cur8</name>
-                  <description>Display</description>
+                  <PartnerLogo src={CardaniaLogo} />
+                  <name>Cardania</name>
+                  <description>Metaverse</description>
                 </PartnerLogoContainer>
               </a>
-              <a href="https://www.cur8labs.io/">
+              <a
+                href="https://niftyslabs.com/"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <PartnerLogoContainer>
-                  <PartnerLogo src={Cur8Logo} />
-                  <name>Cur8</name>
-                  <description>Display</description>
+                  <PartnerLogo src={NiftyLogo} />
+                  <name>NiftySlabs</name>
+                  <description>Physical Collectible Cards</description>
                 </PartnerLogoContainer>
               </a>
-              <a href="https://www.cur8labs.io/">
+              <a href="https://adarealm.io/" target="_blank" rel="noreferrer">
                 <PartnerLogoContainer>
-                  <PartnerLogo src={Cur8Logo} />
-                  <name>Cur8</name>
-                  <description>Display</description>
+                  <PartnerLogo src={OmniLogo} />
+                  <name>OmniBlock</name>
+                  <description>Metaverse</description>
                 </PartnerLogoContainer>
               </a>
             </LogoRow>

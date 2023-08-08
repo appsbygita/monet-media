@@ -84,6 +84,10 @@ export const Row = styled.div`
 export const LogoRow = styled.div`
   display: flex;
   flex-direction: row;
+
+  & a {
+    text-decoration: none;
+  }
 `;
 
 export const HomeTitle = styled.div`
