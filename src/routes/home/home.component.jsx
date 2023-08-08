@@ -15,6 +15,10 @@ import {
   FooterMenu,
   PartnerLogoContainer,
   LogoRow,
+  ContributorSection,
+  ContributorImage,
+  ContributorImageContainer,
+  HomeContainer,
 } from "./home.styles";
 import {
   TitleText,
@@ -25,7 +29,6 @@ import { Spacer } from "../../components/spacer/spacer.styles";
 import { CTAButton as Button } from "../../components/home/cta-button/cta-button.component";
 import { HomeImage } from "../../components/home/home-image/home-image.component";
 
-import DefaultImage from "../../assets/placeholder_image.svg";
 import { Logo } from "../../components/home/logo/logo.component";
 import HomeImgOne from "../../assets/image/home-img-1.png";
 import HomeImgTwo from "../../assets/image/home-img-2.jpeg";
@@ -43,7 +46,7 @@ import OmniLogo from "../../assets/logo/omni.png";
 
 export const Home = () => {
   return (
-    <div>
+    <HomeContainer>
       <HeroSection>
         <Content>
           <Header>
@@ -236,41 +239,46 @@ export const Home = () => {
         </Content>
       </LightSection>
 
-      <DarkSection>
+      <ContributorSection>
         <Content>
           <SectionTitle>
             <n>03.</n> <t>Contributor</t>
           </SectionTitle>
-          <Column>
-            <ContentText>
-              Are you <b>a Creator?</b>
-            </ContentText>
-            <Paragraph>
-              Monet Media empowers creativity through a robust reward system
-              backed by blockchain. Our AI system sources content from artists,
-              writers, and public resources.
-              <br />
-              <br />
-              Each contribution is meticulously tracked, attributed, and forms
-              the basis for our transparent reward distribution.
-              <br />
-              <br />
-              We recognize and reward individual artists for visual assets
-              derived from artworks. Contributors of written content used in our
-              AI-generated advertising receive well-deserved Monet Tokens. We
-              also acknowledge and reward public resources, giving back to the
-              communities that support us.
-              <br />
-              <br />
-              Monet Media fosters a fair and rewarding ecosystem, empowering
-              content creators.
-              <br />
-              <br />
-            </Paragraph>
-            <Button>Start earning with your art today</Button>
-          </Column>
+          <Row>
+            <Column width="47%">
+              <ContentText>
+                Are you <b>a Creator?</b>
+              </ContentText>
+              <Paragraph>
+                Monet Media empowers creativity through a robust reward system
+                backed by blockchain. Our AI system sources content from
+                artists, writers, and public resources.
+                <br />
+                <br />
+                Each contribution is meticulously tracked, attributed, and forms
+                the basis for our transparent reward distribution.
+                <br />
+                <br />
+                We recognize and reward individual artists for visual assets
+                derived from artworks. Contributors of written content used in
+                our AI-generated advertising receive well-deserved Monet Tokens.
+                We also acknowledge and reward public resources, giving back to
+                the communities that support us.
+                <br />
+                <br />
+                Monet Media fosters a fair and rewarding ecosystem, empowering
+                content creators.
+                <br />
+                <br />
+              </Paragraph>
+              <Button>Start earning with your art today</Button>
+            </Column>
+          </Row>
         </Content>
-      </DarkSection>
+        <ContributorImageContainer>
+          <ContributorImage />
+        </ContributorImageContainer>
+      </ContributorSection>
 
       <DarkerSection>
         <Content>
@@ -307,6 +315,6 @@ export const Home = () => {
           </Header>
         </Content>
       </DarkSection>
-    </div>
+    </HomeContainer>
   );
 };

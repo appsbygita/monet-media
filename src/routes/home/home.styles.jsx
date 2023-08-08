@@ -1,5 +1,11 @@
 import { styled } from "styled-components";
 import HeroBg from "../../assets/hero-bg.jpeg";
+import ContributorBg from "../../assets/image/back-3.jpeg";
+
+export const HomeContainer = styled.div`
+  width: 100vw;
+  overflow: clip;
+`;
 
 export const DarkSection = styled.div`
   background: #212121;
@@ -7,6 +13,7 @@ export const DarkSection = styled.div`
 
 export const DarkerSection = styled.div`
   background: #151515;
+  z-index: -999;
 `;
 
 export const LightSection = styled.div`
@@ -26,11 +33,37 @@ export const HeroSection = styled.div`
   align-items: center;
 `;
 
+export const ContributorSection = styled.div`
+  background: #212121;
+  width: 100%;
+  position: relative;
+  z-index: 0;
+`;
+
+export const ContributorImageContainer = styled.div`
+  width: 60%;
+  height: 70%;
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  z-index: 0;
+`;
+
+export const ContributorImage = styled.div`
+  width: 130%;
+  height: 155%;
+  background: url(${ContributorBg});
+  background-position: -209px -2px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+`;
+
 export const Content = styled.div`
   width: 80%;
   height: 100%;
   margin: 0 auto;
   padding: 40px 0;
+  z-index: -999;
 `;
 
 export const Header = styled.div`
@@ -50,7 +83,7 @@ export const CenterDiv = styled.div`
 
 export const Column = styled.div`
   display: flex;
-  width: 55%;
+  width: ${(props) => (props.width ? props.width : "55%")};
   flex-direction: column;
 `;
 
@@ -109,6 +142,8 @@ export const MenuButton = styled.button`
 `;
 
 export const SectionTitle = styled.div`
+  z-index: 999;
+  position: relative;
   padding-top: 40px;
   padding-bottom: 6px;
   border-bottom: 2px solid #aaa;

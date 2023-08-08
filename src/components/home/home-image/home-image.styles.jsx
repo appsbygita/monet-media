@@ -26,9 +26,6 @@ export const FillImage = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-
-  &:hover {
-  }
 `;
 
 export const Rectangle = styled.div`
