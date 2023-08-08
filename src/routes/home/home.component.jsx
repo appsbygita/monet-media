@@ -6,7 +6,6 @@ import {
   LightSection,
   Header,
   MenuButton,
-  Button,
   Content,
   SectionTitle,
   Column,
@@ -23,6 +22,7 @@ import {
   Paragraph,
 } from "../../components/text/text.styles";
 import { Spacer } from "../../components/spacer/spacer.styles";
+import { CTAButton as Button } from "../../components/home/cta_button/ctabutton.component";
 
 import DefaultImage from "../../assets/placeholder_image.svg";
 import { Logo } from "../../components/home/logo/logo.component";
@@ -54,7 +54,7 @@ export const Home = () => {
             </HomeTitle>
             <Spacer />
             <Spacer />
-            <Button>Be the first to know</Button>
+            <Button className="hero-button">Be the first to know</Button>
           </CenterDiv>
         </Content>
       </HeroSection>

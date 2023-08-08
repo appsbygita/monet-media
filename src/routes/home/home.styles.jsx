@@ -106,25 +106,6 @@ export const MenuButton = styled.button`
   font-size: 1rem;
 `;
 
-export const Button = styled.button`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 2px solid #d2f950;
-  background-color: transparent;
-  width: 30rem;
-  height: 5rem;
-  padding: 0.2rem;
-  color: #888;
-  font-family: "Montserrat", sans-serif;
-  font-size: 1.2rem;
-
-  &:hover {
-    background-color: #d2f950;
-    color: #000;
-  }
-`;
-
 export const SectionTitle = styled.div`
   padding-top: 40px;
   padding-bottom: 6px;
