@@ -18,15 +18,16 @@ export const HeroSection = styled.div`
   flex-direction: column;
   width: 100%;
   height: 100vh;
-  background-image: url(${HeroBg});
-  background-color: lightgray 50%;
+  background: url(${HeroBg}) #3d3d3d;
   background-size: cover;
+  background-blend-mode: overlay;
   background-repeat: no-repeat;
   align-items: center;
 `;
 
 export const Content = styled.div`
   width: 80%;
+  height: 100%;
   margin: 0 auto;
   padding: 40px 0;
 `;
@@ -41,7 +42,9 @@ export const CenterDiv = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
+  height: 80%;
   align-items: center;
+  justify-content: center;
 `;
 
 export const Column = styled.div`
@@ -84,14 +87,14 @@ export const HomeTitle = styled.div`
 `;
 
 export const MenuButton = styled.button`
-  width: 6rem;
-  height: 6rem;
+  width: 5rem;
+  height: 5rem;
   border-width: 0;
   border-radius: 50%;
   background: #d2f950;
   font-family: "Unbounded", cursive;
   font-weight: 300;
-  font-size: 1.2rem;
+  font-size: 1rem;
 `;
 
 export const Button = styled.button`

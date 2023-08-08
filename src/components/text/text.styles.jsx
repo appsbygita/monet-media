@@ -1,17 +1,10 @@
 import { styled } from "styled-components";
-// import "./font.css";
 
 export const TitleText = styled.span`
-  font-weight: 300;
+  font-weight: 400;
   font-family: "Unbounded", cursive;
-  font-size: 4rem;
-  color: #fff;
-
-  & b {
-    font-weight: 800;
-    font-size: 7rem;
-    color: #d2f950;
-  }
+  font-size: 3rem;
+  color: #d2f950;
 `;
 
 export const ContentText = styled.span`

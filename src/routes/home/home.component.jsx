@@ -24,29 +24,23 @@ import { Spacer } from "../../components/spacer/spacer.styles";
 
 import DefaultImage from "../../assets/placeholder_image.svg";
 import Cur8Logo from "../../assets/logo/cur8.png";
+import { Logo } from "../../components/home/logo/logo.component";
 
 export const Home = () => {
   return (
     <div>
       <HeroSection>
         <Content>
-          <Spacer />
           <Header>
             <span>Logo</span>
             <MenuButton>Menu</MenuButton>
           </Header>
           <CenterDiv>
             <HomeTitle>
-              <TitleText>
-                Where
-                <br />
-                <b>Creativity</b>
-                <br />
-                Meets
-                <br />
-                <b>Innovation</b>
-              </TitleText>
+              <Logo />
+              <TitleText>Where Creativity Meets Innovation</TitleText>
             </HomeTitle>
+            <Spacer />
             <Spacer />
             <Button>Be the first to know</Button>
           </CenterDiv>
