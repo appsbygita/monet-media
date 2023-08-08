@@ -81,6 +81,11 @@ export const Row = styled.div`
   padding: 30px 0;
 `;
 
+export const LogoRow = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
+
 export const HomeTitle = styled.div`
   text-align: center;
   line-height: 4.5rem;
@@ -136,8 +141,64 @@ export const SectionTitle = styled.div`
   }
 `;
 
+export const PartnerLogoContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  height: 250px;
+  margin: 10px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+
+  @keyframes slidein {
+    from {
+      transform: translate(0px, 30px);
+    }
+
+    to {
+      transform: translate(0px, 0px);
+    }
+  }
+
+  &:hover {
+    background-color: #2b2634;
+
+    & name {
+      display: block;
+    }
+
+    & description {
+      display: block;
+    }
+
+    & img {
+      filter: none;
+      animation: slidein 0.8s;
+    }
+  }
+
+  & name {
+    display: none;
+    padding-top: 20px;
+    padding-bottom: 8px;
+    font-family: "Unbounded", cursive;
+    font-weight: 700;
+    font-size: 1rem;
+    color: #fff;
+  }
+
+  & description {
+    display: none;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 0.8rem;
+    color: #fff;
+  }
+`;
+
 export const PartnerLogo = styled.img`
-  width: 150px;
-  height: 150px;
-  margin: 0 30px;
+  width: 120px;
+  height: 120px;
+  filter: grayscale(100%);
 `;

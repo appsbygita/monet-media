@@ -14,6 +14,8 @@ import {
   PartnerLogo,
   DarkerSection,
   FooterMenu,
+  PartnerLogoContainer,
+  LogoRow,
 } from "./home.styles";
 import {
   TitleText,
@@ -36,8 +38,8 @@ export const Home = () => {
             <MenuButton>Menu</MenuButton>
           </Header>
           <CenterDiv>
+            <Logo />
             <HomeTitle>
-              <Logo />
               <TitleText>Where Creativity Meets Innovation</TitleText>
             </HomeTitle>
             <Spacer />
@@ -111,40 +113,80 @@ export const Home = () => {
                 to provide specialized products, services, or expertise.
               </center>
             </Paragraph>
-            <Row>
+            <LogoRow>
               <a href="https://www.cur8labs.io/">
-                <PartnerLogo src={Cur8Logo} />
+                <PartnerLogoContainer>
+                  <PartnerLogo src={Cur8Logo} />
+                  <name>Cur8</name>
+                  <description>Display</description>
+                </PartnerLogoContainer>
               </a>
               <a href="https://www.cur8labs.io/">
-                <PartnerLogo src={Cur8Logo} />
+                <PartnerLogoContainer>
+                  <PartnerLogo src={Cur8Logo} />
+                  <name>Cur8</name>
+                  <description>Display</description>
+                </PartnerLogoContainer>
               </a>
               <a href="https://www.cur8labs.io/">
-                <PartnerLogo src={Cur8Logo} />
+                <PartnerLogoContainer>
+                  <PartnerLogo src={Cur8Logo} />
+                  <name>Cur8</name>
+                  <description>Display</description>
+                </PartnerLogoContainer>
               </a>
               <a href="https://www.cur8labs.io/">
-                <PartnerLogo src={Cur8Logo} />
+                <PartnerLogoContainer>
+                  <PartnerLogo src={Cur8Logo} />
+                  <name>Cur8</name>
+                  <description>Display</description>
+                </PartnerLogoContainer>
               </a>
               <a href="https://www.cur8labs.io/">
-                <PartnerLogo src={Cur8Logo} />
+                <PartnerLogoContainer>
+                  <PartnerLogo src={Cur8Logo} />
+                  <name>Cur8</name>
+                  <description>Display</description>
+                </PartnerLogoContainer>
               </a>
-            </Row>
-            <Row>
+            </LogoRow>
+            <LogoRow>
               <a href="https://www.cur8labs.io/">
-                <PartnerLogo src={Cur8Logo} />
+                <PartnerLogoContainer>
+                  <PartnerLogo src={Cur8Logo} />
+                  <name>Cur8</name>
+                  <description>Display</description>
+                </PartnerLogoContainer>
               </a>
               <a href="https://www.cur8labs.io/">
-                <PartnerLogo src={Cur8Logo} />
+                <PartnerLogoContainer>
+                  <PartnerLogo src={Cur8Logo} />
+                  <name>Cur8</name>
+                  <description>Display</description>
+                </PartnerLogoContainer>
               </a>
               <a href="https://www.cur8labs.io/">
-                <PartnerLogo src={Cur8Logo} />
+                <PartnerLogoContainer>
+                  <PartnerLogo src={Cur8Logo} />
+                  <name>Cur8</name>
+                  <description>Display</description>
+                </PartnerLogoContainer>
               </a>
               <a href="https://www.cur8labs.io/">
-                <PartnerLogo src={Cur8Logo} />
+                <PartnerLogoContainer>
+                  <PartnerLogo src={Cur8Logo} />
+                  <name>Cur8</name>
+                  <description>Display</description>
+                </PartnerLogoContainer>
               </a>
               <a href="https://www.cur8labs.io/">
-                <PartnerLogo src={Cur8Logo} />
+                <PartnerLogoContainer>
+                  <PartnerLogo src={Cur8Logo} />
+                  <name>Cur8</name>
+                  <description>Display</description>
+                </PartnerLogoContainer>
               </a>
-            </Row>
+            </LogoRow>
           </CenterDiv>
         </Content>
       </LightSection>

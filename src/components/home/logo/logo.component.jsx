@@ -8,11 +8,11 @@ import { LogoContainer, LogoSpace } from "./logo.styles";
 export const Logo = () => {
   return (
     <LogoContainer>
-      <img src={M} alt="logo part 1" height="70rem" />
-      <img src={Sun} alt="logo part 2" height="150rem" />
-      <img src={Net} alt="logo part 3" height="70rem" />
+      <img src={M} alt="logo part 1" width="11%" />
+      <img src={Sun} alt="logo part 2" width="15%" />
+      <img src={Net} alt="logo part 3" width="24%" />
       <LogoSpace />
-      <img src={Media} alt="logo part 4" height="70rem" />
+      <img src={Media} alt="logo part 4" width="40%" />
     </LogoContainer>
   );
 };
