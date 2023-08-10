@@ -4,7 +4,7 @@ import {
   HomeTitle,
   DarkSection,
   LightSection,
-  Header,
+  Footer,
   MenuButton,
   Content,
   SectionTitle,
@@ -19,6 +19,8 @@ import {
   ContributorImage,
   ContributorImageContainer,
   HomeContainer,
+  Header,
+  SocialLinks,
 } from "./home.styles";
 import {
   TitleText,
@@ -50,7 +52,6 @@ export const Home = () => {
       <HeroSection>
         <Content>
           <Header>
-            <span>Logo</span>
             <MenuButton>Menu</MenuButton>
           </Header>
           <CenterDiv>
@@ -282,7 +283,7 @@ export const Home = () => {
 
       <DarkerSection>
         <Content>
-          <Column>
+          <Column width="45%">
             <ContentText>
               <b>Explore</b> the content creators to get <b>Inspired</b>
             </ContentText>
@@ -292,27 +293,33 @@ export const Home = () => {
 
       <DarkSection>
         <Content>
-          <Header>
+          <Footer>
             <span>Logo</span>
             <FooterMenu>
-              <a className="a1" href="#">
-                PRIVACY POLICY
-              </a>
-              <a className="a1" href="#">
-                TERM OF USE
-              </a>
-              <p>Connect With Us</p>
-              <a className="a2" href="#">
-                LinkedIn
-              </a>
-              <a className="a2" href="#">
-                Instagram
-              </a>
-              <a className="a2" href="#">
-                info@MonetMedia.com
-              </a>
+              <group>
+                <a className="a1" href="#">
+                  Privacy Policy
+                </a>
+                <a className="a1" href="#">
+                  Term of Use
+                </a>
+              </group>
+              <SocialLinks>
+                <linksTitle>Connect With Us</linksTitle>
+                <links>
+                  <a className="a2" href="#">
+                    LinkedIn
+                  </a>
+                  <a className="a2" href="#">
+                    Instagram
+                  </a>
+                  <a className="a2" href="#">
+                    info@MonetMedia.com
+                  </a>
+                </links>
+              </SocialLinks>
             </FooterMenu>
-          </Header>
+          </Footer>
         </Content>
       </DarkSection>
     </HomeContainer>

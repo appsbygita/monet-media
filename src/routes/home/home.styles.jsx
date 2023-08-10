@@ -64,10 +64,16 @@ export const Content = styled.div`
   padding: 40px 0;
 `;
 
-export const Header = styled.div`
+export const Footer = styled.div`
   display: flex;
   width: 100%;
   justify-content: space-between;
+`;
+
+export const Header = styled.div`
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
 `;
 
 export const CenterDiv = styled.div`
@@ -85,25 +91,55 @@ export const Column = styled.div`
   flex-direction: column;
 `;
 
+export const SocialLinks = styled.div`
+  display: flex;
+  flex-direction: column;
+  font-family: "Unbounded", cursive;
+
+  & linksTitle {
+    color: #d2f950;
+    font-weight: 800;
+    padding-bottom: 6px;
+  }
+
+  & links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    & a {
+      color: #aaa;
+      font-weight: 300;
+      text-decoration: none;
+      padding: 6px 0;
+
+      &:hover {
+        border-left: 3px solid #d2f950;
+        padding-left: 10px;
+      }
+    }
+  }
+`;
+
 export const FooterMenu = styled.div`
   display: flex;
-  width: 30%;
+  width: 25%;
   flex-direction: column;
   font-family: "Unbounded", cursive;
   color: #d2f950;
   padding-bottom: 100px;
   font-weight: 800;
+  font-size: 1rem;
 
-  & a.a1 {
-    color: #d2f950;
-    font-weight: 800;
-    text-decoration: none;
-  }
-
-  & a.a2 {
-    color: #aaa;
-    font-weight: 300;
-    text-decoration: none;
+  & group {
+    padding-bottom: 30px;
+    & a {
+      display: block;
+      color: #d2f950;
+      font-weight: 800;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 1.2rem;
+    }
   }
 `;
 
@@ -137,6 +173,10 @@ export const MenuButton = styled.button`
   font-family: "Unbounded", cursive;
   font-weight: 300;
   font-size: 1rem;
+
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
 export const SectionTitle = styled.div`
