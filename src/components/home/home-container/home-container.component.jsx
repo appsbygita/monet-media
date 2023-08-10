@@ -42,7 +42,7 @@ import CardaniaLogo from "../../../assets/logo/cardania.png";
 import NiftyLogo from "../../../assets/logo/nifty.png";
 import OmniLogo from "../../../assets/logo/omni.png";
 
-export const HomeContainer = ({ onMenuClick, className }) => {
+export const HomeContainer = ({ onMenuClick, onButtonClick, className }) => {
   return (
     <Container className={className}>
       <HeroSection>
@@ -57,7 +57,9 @@ export const HomeContainer = ({ onMenuClick, className }) => {
             </HomeTitle>
             <Spacer />
             <Spacer />
-            <Button className="hero-button">Be the first to know</Button>
+            <Button onClick={onButtonClick} className="hero-button">
+              Be the first to know
+            </Button>
           </CenterDiv>
         </Content>
       </HeroSection>
@@ -84,7 +86,7 @@ export const HomeContainer = ({ onMenuClick, className }) => {
                 <br />
                 <br />
               </Paragraph>
-              <Button>Express Your Interest</Button>
+              <Button onClick={onButtonClick}>Express Your Interest</Button>
             </Column>
             <HomeImage img={HomeImgOne} />
           </Row>
@@ -104,7 +106,7 @@ export const HomeContainer = ({ onMenuClick, className }) => {
                 <br />
                 <br />
               </Paragraph>
-              <Button>Express Your Interest</Button>
+              <Button onClick={onButtonClick}>Express Your Interest</Button>
             </Column>
           </Row>
         </Content>
@@ -267,7 +269,9 @@ export const HomeContainer = ({ onMenuClick, className }) => {
                 <br />
                 <br />
               </Paragraph>
-              <Button>Start earning with your art today</Button>
+              <Button onClick={onButtonClick}>
+                Start earning with your art today
+              </Button>
             </Column>
           </Row>
         </Content>

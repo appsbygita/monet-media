@@ -1,29 +1,44 @@
 import { useState, useEffect } from "react";
 
-import { MenuPopup } from "../../components/home/menu-popup/menu-popup.component";
-import { HomeContainer } from "../../components/home/home-container/home-container.component";
-
-import { MenuOverlay, HomePage } from "./home.styles";
+import { MenuOverlay, HomePage, ContactOverlay } from "./home.styles";
 
 export const Home = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isContactOpen, setIsContactOpen] = useState(false);
 
-  // useEffect(() => {}, [isMenuOpen]);
+  useEffect(() => {
+    const html = document.querySelector("html");
+    if (html) {
+      if (isMenuOpen || isContactOpen) {
+        html.style.overflow = "hidden";
+      } else {
+        html.style.overflow = "auto";
+      }
+    }
+  }, [isMenuOpen, isContactOpen]);
 
   const onMenuClickFunction = () => {
     setIsMenuOpen(!isMenuOpen);
-    console.log(isMenuOpen);
+  };
+
+  const onButtonClickFunction = () => {
+    setIsContactOpen(!isContactOpen);
   };
 
   return (
     <div>
       <HomePage
-        className={isMenuOpen ? "hide" : "show"}
+        // className={isMenuOpen || isContactOpen ? "hide" : "show"}
         onMenuClick={onMenuClickFunction}
+        onButtonClick={onButtonClickFunction}
       />
       <MenuOverlay
         className={isMenuOpen ? "show" : "hide"}
         onMenuClick={onMenuClickFunction}
+      />
+      <ContactOverlay
+        className={isContactOpen ? "show" : "hide"}
+        onButtonClick={onButtonClickFunction}
       />
     </div>
   );

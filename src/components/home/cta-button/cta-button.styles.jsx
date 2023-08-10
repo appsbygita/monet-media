@@ -17,8 +17,8 @@ export const Button = styled.button`
   align-items: center;
   border: 2px solid #d2f950;
   background-color: transparent;
-  width: 30rem;
-  height: 5rem;
+  width: ${(props) => props.width};
+  height: ${(props) => props.height};
   padding: 0.2rem;
   color: #888;
   font-family: "Montserrat", sans-serif;

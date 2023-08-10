@@ -7,9 +7,6 @@ export const DisplayContainer = styled.div`
   flex-direction: column;
   width: 100vw;
   height: 100vh;
-  position: absolute;
-  top: 0;
-  left: 0;
   background: #202020;
 
   & ${Header} {
@@ -28,6 +25,7 @@ export const MenuContent = styled.div`
 
 export const LeftCol = styled.div`
   width: 35%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;

@@ -141,7 +141,7 @@ export const MenuButton = styled.button`
   border-width: 0;
   border-radius: 50%;
   background: #d2f950;
-  font-family: "Unbounded", cursive;
+  font-family: "Unbounded", sans-serif;
   font-weight: 300;
   font-size: 1rem;
 
