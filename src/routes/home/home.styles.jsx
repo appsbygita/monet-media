@@ -1,264 +1,41 @@
 import { styled } from "styled-components";
-import HeroBg from "../../assets/hero-bg.jpeg";
-import ContributorBg from "../../assets/image/back-3.jpeg";
 
-export const HomeContainer = styled.div`
-  width: 100vw;
-  overflow: clip;
-`;
+import { MenuPopup } from "../../components/home/menu-popup/menu-popup.component";
+import { HomeContainer } from "../../components/home/home-container/home-container.component";
 
-export const DarkSection = styled.div`
-  background: #212121;
-`;
-
-export const DarkerSection = styled.div`
-  background: #151515;
-`;
-
-export const LightSection = styled.div`
-  background: #3c3747;
-`;
-
-export const HeroSection = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 100vh;
-  background: url(${HeroBg}) #3d3d3d;
-  background-size: cover;
-  background-blend-mode: overlay;
-  background-repeat: no-repeat;
-  background-position: center;
-  align-items: center;
-`;
-
-export const ContributorSection = styled.div`
-  background: #212121;
-  width: 100%;
-  position: relative;
-  z-index: 0;
-`;
-
-export const ContributorImageContainer = styled.div`
-  width: 60%;
-  height: 70%;
-  position: absolute;
-  top: 0%;
-  left: 50%;
-  z-index: 0;
-`;
-
-export const ContributorImage = styled.div`
-  width: 130%;
-  height: 155%;
-  background: url(${ContributorBg});
-  background-position: -209px -2px;
-  background-size: 100%;
-  background-repeat: no-repeat;
-`;
-
-export const Content = styled.div`
-  width: 80%;
-  height: 100%;
-  margin: 0 auto;
-  padding: 40px 0;
-`;
-
-export const Footer = styled.div`
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-`;
-
-export const Header = styled.div`
-  display: flex;
-  width: 100%;
-  justify-content: flex-end;
-`;
-
-export const CenterDiv = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 80%;
-  align-items: center;
-  justify-content: center;
-`;
-
-export const Column = styled.div`
-  display: flex;
-  width: ${(props) => (props.width ? props.width : "55%")};
-  flex-direction: column;
-`;
-
-export const SocialLinks = styled.div`
-  display: flex;
-  flex-direction: column;
-  font-family: "Unbounded", cursive;
-
-  & linksTitle {
-    color: #d2f950;
-    font-weight: 800;
-    padding-bottom: 6px;
-  }
-
-  & links {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    & a {
-      color: #aaa;
-      font-weight: 300;
-      text-decoration: none;
-      padding: 6px 0;
-
-      &:hover {
-        border-left: 3px solid #d2f950;
-        padding-left: 10px;
-      }
-    }
-  }
-`;
-
-export const FooterMenu = styled.div`
-  display: flex;
-  width: 25%;
-  flex-direction: column;
-  font-family: "Unbounded", cursive;
-  color: #d2f950;
-  padding-bottom: 100px;
-  font-weight: 800;
-  font-size: 1rem;
-
-  & group {
-    padding-bottom: 30px;
-    & a {
-      display: block;
-      color: #d2f950;
-      font-weight: 800;
-      text-decoration: none;
-      text-transform: uppercase;
-      font-size: 1.2rem;
-    }
-  }
-`;
-
-export const Row = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 30px 0;
-`;
-
-export const LogoRow = styled.div`
-  display: flex;
-  flex-direction: row;
-
-  & a {
-    text-decoration: none;
-  }
-`;
-
-export const HomeTitle = styled.div`
-  text-align: center;
-  line-height: 4.5rem;
-`;
-
-export const MenuButton = styled.button`
-  width: 5rem;
-  height: 5rem;
-  border-width: 0;
-  border-radius: 50%;
-  background: #d2f950;
-  font-family: "Unbounded", cursive;
-  font-weight: 300;
-  font-size: 1rem;
-
-  &:hover {
-    cursor: pointer;
-  }
-`;
-
-export const SectionTitle = styled.div`
-  z-index: 999;
-  position: relative;
-  padding-top: 40px;
-  padding-bottom: 6px;
-  border-bottom: 2px solid #aaa;
-  margin-bottom: 30px;
-
-  text-transform: uppercase;
-  font-family: "Inter", sans-serif;
-  font-weight: 700;
-  font-size: 1.5rem;
-
-  & n {
-    color: #fff;
-  }
-
-  & t {
-    color: #d2f950;
-  }
-`;
-
-export const PartnerLogoContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 200px;
-  height: 250px;
-  margin: 10px;
-  align-items: center;
-  justify-content: center;
-  border-radius: 30px;
-
-  @keyframes slidein {
+export const HomePage = styled(HomeContainer).attrs((props) => ({
+  className: props.className,
+}))`
+  @keyframes slideaway {
     from {
-      transform: translate(0px, 30px);
+      display: block;
     }
-
     to {
+      opacity: 0.8;
+    }
+  }
+
+  &.hide {
+    animation: slideaway 1s;
+    display: none;
+  }
+`;
+
+export const MenuOverlay = styled(MenuPopup).attrs((props) => ({
+  className: props.className,
+}))`
+  @keyframes effect {
+    0% {
+      transform: translate(0px, 100vh);
+    }
+    100% {
       transform: translate(0px, 0px);
     }
   }
 
-  &:hover {
-    background-color: #2b2634;
+  animation: effect 1s;
 
-    & name {
-      display: block;
-    }
-
-    & description {
-      display: block;
-    }
-
-    & img {
-      filter: none;
-      animation: slidein 0.8s;
-    }
-  }
-
-  & name {
+  &.hide {
     display: none;
-    padding-top: 20px;
-    padding-bottom: 8px;
-    font-family: "Unbounded", cursive;
-    font-weight: 700;
-    font-size: 1rem;
-    color: #fff;
   }
-
-  & description {
-    display: none;
-    font-family: "Inter", sans-serif;
-    font-weight: 400;
-    font-size: 0.8rem;
-    color: #fff;
-  }
-`;
-
-export const PartnerLogo = styled.img`
-  width: 120px;
-  height: 120px;
-  filter: grayscale(100%);
 `;
