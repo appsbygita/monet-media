@@ -2,14 +2,14 @@ import { styled } from "styled-components";
 
 export const TitleText = styled.span`
   font-weight: 400;
-  font-family: "Unbounded", cursive;
+  font-family: "Unbounded", sans-serif;
   font-size: 3rem;
   color: #d2f950;
 `;
 
 export const ContentText = styled.span`
   font-weight: 300;
-  font-family: "Unbounded", cursive;
+  font-family: "Unbounded", sans-serif;
   font-size: 3rem;
   color: #fff;
 

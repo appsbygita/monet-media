@@ -5,7 +5,7 @@ import Sun from "../../../assets/monet_logo/sun_static.png";
 
 import { LogoContainer, LogoSpace } from "./logo.styles";
 
-export const Logo = () => {
+export const Logo = ({ size }) => {
   return (
     <LogoContainer>
       <img src={M} alt="logo part 1" width="11%" />

@@ -20,6 +20,9 @@ import {
   ContributorImageContainer,
   Container,
   Header,
+  GalleryTextContainer,
+  GallerySection,
+  FooterLogo,
 } from "./home-container.styles";
 import { TitleText, ContentText, Paragraph } from "../../text/text.styles";
 import { Spacer } from "../../spacer/spacer.styles";
@@ -41,6 +44,7 @@ import AfricaLogo from "../../../assets/logo/africa.png";
 import CardaniaLogo from "../../../assets/logo/cardania.png";
 import NiftyLogo from "../../../assets/logo/nifty.png";
 import OmniLogo from "../../../assets/logo/omni.png";
+import { Gallery } from "../../gallery/gallery.component";
 
 export const HomeContainer = ({ onMenuClick, onButtonClick, className }) => {
   return (
@@ -281,19 +285,25 @@ export const HomeContainer = ({ onMenuClick, onButtonClick, className }) => {
       </ContributorSection>
 
       <DarkerSection>
-        <Content>
-          <Column width="45%">
+        <GallerySection>
+          <GalleryTextContainer>
             <ContentText>
               <b>Explore</b> the content creators to get <b>Inspired</b>
             </ContentText>
-          </Column>
-        </Content>
+          </GalleryTextContainer>
+          <Gallery />
+          <Row align="center">
+            <Button>Load More</Button>
+          </Row>
+        </GallerySection>
       </DarkerSection>
 
       <DarkSection>
         <Content>
           <Footer>
-            <span>Logo</span>
+            <FooterLogo>
+              <Logo />
+            </FooterLogo>
             <FooterMenu>
               <group>
                 <a className="a1" href="#">
@@ -303,20 +313,7 @@ export const HomeContainer = ({ onMenuClick, onButtonClick, className }) => {
                   Term of Use
                 </a>
               </group>
-              <SocialLinks>
-                <linksTitle>Connect With Us</linksTitle>
-                <links>
-                  <a className="a2" href="#">
-                    LinkedIn
-                  </a>
-                  <a className="a2" href="#">
-                    Instagram
-                  </a>
-                  <a className="a2" href="#">
-                    info@MonetMedia.com
-                  </a>
-                </links>
-              </SocialLinks>
+              <SocialLinks />
             </FooterMenu>
           </Footer>
         </Content>

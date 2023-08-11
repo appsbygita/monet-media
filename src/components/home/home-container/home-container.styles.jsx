@@ -91,6 +91,12 @@ export const Column = styled.div`
   flex-direction: column;
 `;
 
+export const FooterLogo = styled.div`
+  display: flex;
+  width: 30%;
+  align-items: flex-start;
+`;
+
 export const FooterMenu = styled.div`
   display: flex;
   width: 25%;
@@ -117,7 +123,7 @@ export const FooterMenu = styled.div`
 export const Row = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: ${(props) => (props.align ? props.align : "space-between")};
   padding: 30px 0;
 `;
 
@@ -213,7 +219,7 @@ export const PartnerLogoContainer = styled.div`
     display: none;
     padding-top: 20px;
     padding-bottom: 8px;
-    font-family: "Unbounded", cursive;
+    font-family: "Unbounded", sans-serif;
     font-weight: 700;
     font-size: 1rem;
     color: #fff;
@@ -232,4 +238,15 @@ export const PartnerLogo = styled.img`
   width: 120px;
   height: 120px;
   filter: grayscale(100%);
+`;
+
+export const GalleryTextContainer = styled.div`
+  position: absolute;
+  width: 35%;
+`;
+
+export const GallerySection = styled.div`
+  width: 80%;
+  margin: 0 auto;
+  padding: 40px 0;
 `;
