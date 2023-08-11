@@ -1,5 +1,5 @@
 import { styled } from "styled-components";
-import HeroBg from "../../../assets/hero-bg.jpeg";
+import HeroBg from "../../../assets/hero-bg.webp";
 import ContributorBg from "../../../assets/image/back-3.jpeg";
 
 export const Container = styled.div`

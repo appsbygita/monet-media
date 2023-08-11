@@ -1,9 +1,9 @@
-import Mock1 from "../../assets/gallery_mock/gallery-1.jpeg";
-import Mock2 from "../../assets/gallery_mock/gallery-2.jpeg";
-import Mock3 from "../../assets/gallery_mock/gallery-3.jpeg";
-import Mock4 from "../../assets/gallery_mock/gallery-4.jpeg";
-import Mock5 from "../../assets/gallery_mock/gallery-5.jpeg";
-import Mock6 from "../../assets/gallery_mock/gallery-6.jpeg";
+import Mock1 from "../../assets/gallery_mock/gallery-1.webp";
+import Mock2 from "../../assets/gallery_mock/gallery-2.webp";
+import Mock3 from "../../assets/gallery_mock/gallery-3.webp";
+import Mock4 from "../../assets/gallery_mock/gallery-4.webp";
+import Mock5 from "../../assets/gallery_mock/gallery-5.webp";
+import Mock6 from "../../assets/gallery_mock/gallery-6.webp";
 import { GalleryImage } from "../gallery-image/gallery-image.component";
 import { GalleryColumnContainer, GalleryContainer } from "./gallery.styles";
 

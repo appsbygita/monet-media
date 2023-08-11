@@ -33,8 +33,8 @@ import { HomeImage } from "../home-image/home-image.component";
 import { SocialLinks } from "../social-links/social-links.component";
 
 import { Logo } from "../logo/logo.component";
-import HomeImgOne from "../../../assets/image/home-img-1.png";
-import HomeImgTwo from "../../../assets/image/home-img-2.jpeg";
+import HomeImgOne from "../../../assets/image/home-img-1.webp";
+import HomeImgTwo from "../../../assets/image/home-img-2.webp";
 
 import Cur8Logo from "../../../assets/logo/cur8.png";
 import SplashLogo from "../../../assets/logo/splash.png";
