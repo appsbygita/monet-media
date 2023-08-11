@@ -59,10 +59,12 @@ export const ContributorImage = styled.div`
 `;
 
 export const Content = styled.div`
+  display: flex;
+  flex-direction: column;
   width: 80%;
   height: 100%;
   margin: 0 auto;
-  padding: 40px 0;
+  padding: ${(props) => (props.padding ? props.padding : "40px")} 0;
 `;
 
 export const Footer = styled.div`
@@ -74,6 +76,7 @@ export const Footer = styled.div`
 export const Header = styled.div`
   display: flex;
   justify-content: flex-end;
+  padding-top: 40px;
 `;
 
 export const CenterDiv = styled.div`
@@ -85,10 +88,28 @@ export const CenterDiv = styled.div`
   justify-content: center;
 `;
 
+export const HeroDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 65%;
+  align-items: center;
+  justify-content: flex-end;
+`;
+
 export const Column = styled.div`
   display: flex;
   width: ${(props) => (props.width ? props.width : "55%")};
   flex-direction: column;
+`;
+
+export const VerticalLine = styled.div`
+  margin: 4px auto;
+  width: 0px;
+  display: flex;
+  flex: 1;
+  border-left: 1.5px solid #fff;
+  border-right: 1.5px solid #fff;
 `;
 
 export const FooterLogo = styled.div`

@@ -21,10 +21,14 @@ export const MenuPopup = ({ onMenuClick, className }) => {
         <RightCol>
           <menuTitle>About</menuTitle>
           <menuLink>
-            <a href="#">Our Approach</a>
+            <a href="#our-approach" onClick={onMenuClick}>
+              Our Approach
+            </a>
           </menuLink>
           <menuLink>
-            <a href="#">Our Ecosystem</a>
+            <a href="#our-ecosystem" onClick={onMenuClick}>
+              Our Ecosystem
+            </a>
           </menuLink>
         </RightCol>
       </MenuContent>

@@ -23,6 +23,8 @@ import {
   GalleryTextContainer,
   GallerySection,
   FooterLogo,
+  VerticalLine,
+  HeroDiv,
 } from "./home-container.styles";
 import { TitleText, ContentText, Paragraph } from "../../text/text.styles";
 import { Spacer } from "../../spacer/spacer.styles";
@@ -50,11 +52,11 @@ export const HomeContainer = ({ onMenuClick, onButtonClick, className }) => {
   return (
     <Container className={className}>
       <HeroSection>
-        <Content>
+        <Content padding="0">
           <Header>
             <MenuButton onClick={onMenuClick}>Menu</MenuButton>
           </Header>
-          <CenterDiv>
+          <HeroDiv>
             <Logo />
             <HomeTitle>
               <TitleText>Where Creativity Meets Innovation</TitleText>
@@ -64,11 +66,12 @@ export const HomeContainer = ({ onMenuClick, onButtonClick, className }) => {
             <Button onClick={onButtonClick} className="hero-button">
               Be the first to know
             </Button>
-          </CenterDiv>
+          </HeroDiv>
+          <VerticalLine />
         </Content>
       </HeroSection>
 
-      <DarkSection>
+      <DarkSection id="our-approach">
         <Content>
           <SectionTitle>
             <n>01.</n> <t>Our Approach</t>
@@ -116,7 +119,7 @@ export const HomeContainer = ({ onMenuClick, onButtonClick, className }) => {
         </Content>
       </DarkSection>
 
-      <LightSection>
+      <LightSection id="our-ecosystem">
         <Content>
           <SectionTitle>
             <n>02.</n> <t>Our Ecosystem</t>
