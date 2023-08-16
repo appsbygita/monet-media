@@ -305,7 +305,7 @@ export const HomeContainer = ({ onMenuClick, onButtonClick, className }) => {
         <Content>
           <Footer>
             <FooterLogo>
-              <Logo />
+              <Logo isStatic={true} />
             </FooterLogo>
             <FooterMenu>
               <group>
