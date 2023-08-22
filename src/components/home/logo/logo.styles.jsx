@@ -8,5 +8,5 @@ export const LogoContainer = styled.div`
 `;
 
 export const LogoSpace = styled.div`
-  width: 4%;
+  width: 10%;
 `;

@@ -14,8 +14,8 @@ export const Logo = ({ isStatic }) => {
   const ref = useRef(null);
 
   useEffect(() => {
-    setWidth(ref.current.clientWidth * 0.15);
-  }, []);
+    setWidth(ref.current.clientWidth * 0.1);
+  }, [ref]);
 
   return (
     <LogoContainer ref={ref}>
