@@ -12,7 +12,7 @@ export const SocialLinks = () => {
           Instagram
         </a>
         <a className="a2" href="#">
-          info@MonetMedia.com
+          info@MonetMedia.ai
         </a>
       </links>
     </SocialLinksContainer>

@@ -10,7 +10,7 @@ export const GalleryImage = ({ image, name, artist }) => {
       <ImageContainer image={image}></ImageContainer>
       <ImageDescriptionContainer>
         <name>{name}</name>
-        <artist>by {artist}</artist>
+        <artist>{artist}</artist>
       </ImageDescriptionContainer>
     </ImageContainerWrapper>
   );

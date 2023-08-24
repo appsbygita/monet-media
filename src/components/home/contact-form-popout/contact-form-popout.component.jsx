@@ -1,3 +1,5 @@
+import Select from "react-select";
+
 import {
   CloseButton,
   DisplayContainer,
@@ -9,12 +11,22 @@ import {
   PopupContent,
   RightCol,
   TopRow,
+  customStyles,
+  selectTheme,
 } from "./contact-form-popout.styles";
 import Checkbox from "../checkbox/checkbox.component";
 import { SocialLinks } from "../social-links/social-links.component";
 
 import CloseIcon from "../../../assets/close.svg";
 import { CTAButton } from "../cta-button/cta-button.component";
+import { CountrySelect } from "../country-select/country-select.component";
+
+const interestOptions = [
+  { value: "general", label: "General" },
+  { value: "arts", label: "Arts" },
+  { value: "advertising", label: "Advertising" },
+  { value: "monet-tokens", label: "Monet Tokens" },
+];
 
 export const ContactFormPopout = ({ onButtonClick, className }) => {
   return (
@@ -55,13 +67,23 @@ export const ContactFormPopout = ({ onButtonClick, className }) => {
             <InputRow>
               <InputField>
                 <InputLabel>Country</InputLabel>
-                <InputText />
+                <CountrySelect
+                  required
+                  theme={selectTheme}
+                  styles={customStyles}
+                />
               </InputField>
             </InputRow>
             <InputRow>
               <InputField>
                 <InputLabel>Area of Interest</InputLabel>
-                <InputText />
+                <Select
+                  required
+                  isSearchable={false}
+                  options={interestOptions}
+                  theme={selectTheme}
+                  styles={customStyles}
+                />
               </InputField>
             </InputRow>
             <InputRow>

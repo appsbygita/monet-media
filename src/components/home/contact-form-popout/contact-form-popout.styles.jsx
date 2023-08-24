@@ -1,5 +1,44 @@
 import { styled } from "styled-components";
 
+export const selectTheme = (theme) => ({
+  ...theme,
+  borderRadius: 0,
+  colors: {
+    ...theme.colors,
+  },
+});
+
+export const customStyles = {
+  option: (defaultStyles, state) => ({
+    ...defaultStyles,
+    color: state.isSelected ? "#fff" : "#000",
+    backgroundColor: state.isSelected
+      ? "#747474"
+      : state.isFocused
+      ? "#d2f950"
+      : "#fff",
+  }),
+  input: (defaultStyles) => ({
+    ...defaultStyles,
+    color: "#fff",
+  }),
+  control: (defaultStyles, state) => ({
+    ...defaultStyles,
+    backgroundColor: "#202020",
+    paddingLeft: "8px",
+    border: state.isFocused ? "1px solid #fff" : "1px solid #747474",
+    boxShadow: "none",
+    "&:hover": {
+      border: "1px solid #fff",
+    },
+  }),
+  singleValue: (defaultStyles) => ({ ...defaultStyles, color: "#fff" }),
+  dropdownIndicator: (base) => ({
+    ...base,
+    color: "#d2f950", // Custom colour
+  }),
+};
+
 export const DisplayContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -90,28 +129,15 @@ export const InputText = styled.input.attrs({
   height: 2.3rem;
   border: 1px solid #747474;
   background-color: #202020;
-  color: #b0b0b0;
+  color: #fff;
   font-size: 1.1rem;
   font-size: 2.2vh;
+  padding-left: 8px;
 
   &:focus {
     background-color: #fff;
     color: #000;
   }
-`;
-
-export const InputCheckbox = styled.input.attrs({
-  type: "checkbox",
-  required: true,
-})`
-  // appearance: none;
-  // background-color: #202020;
-  // margin: 4px 20px 0 0;
-  // color: #b0b0b0;
-  // width: 100px;
-  // height: 30px;
-  // border: 1px solid #747474;
-  outline: 1px solid #747474;
 `;
 
 export const InputLabel = styled.p`

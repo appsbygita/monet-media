@@ -11,16 +11,16 @@ export const Gallery = () => {
   return (
     <GalleryContainer>
       <GalleryColumnContainer top="50vh">
-        <GalleryImage image={Mock1} name="The Sun" artist="Picassio" />
-        <GalleryImage image={Mock4} name="[Title]" artist="[Artist]" />
+        <GalleryImage image={Mock1} name="The Sun" artist="by Picassio" />
+        <GalleryImage image={Mock4} name="" artist="" />
       </GalleryColumnContainer>
       <GalleryColumnContainer top="30vh">
-        <GalleryImage image={Mock2} name="[Title]" artist="[Artist]" />
-        <GalleryImage image={Mock5} name="[Title]" artist="[Artist]" />
+        <GalleryImage image={Mock2} />
+        <GalleryImage image={Mock5} />
       </GalleryColumnContainer>
       <GalleryColumnContainer top="10vh">
-        <GalleryImage image={Mock3} name="[Title]" artist="[Artist]" />
-        <GalleryImage image={Mock6} name="[Title]" artist="[Artist]" />
+        <GalleryImage image={Mock3} />
+        <GalleryImage image={Mock6} />
       </GalleryColumnContainer>
     </GalleryContainer>
   );
