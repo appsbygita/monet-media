@@ -34,8 +34,8 @@ export const CloseButton = styled.img`
 `;
 
 export const LeftCol = styled.div`
-  width: 30%;
-  height: 100%;
+  width: min(300px, 30%);
+  height: 600px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -57,28 +57,34 @@ export const LeftCol = styled.div`
 
 export const RightCol = styled.div`
   display: flex;
-  flex: 1;
   flex-direction: column;
   font-family: "Inter", sans-serif;
   color: #b0b0b0;
+  width: min(750px, 70%);
+  height: min(650px, 100%);
 
   & titleText {
     font-family: "Unbounded", sans-serif;
     font-weight: 700;
     font-size: 1.5rem;
+    font-size: 3.5vh;
     padding: 20px 0;
+    padding: 2vh 0;
     color: #d2f950;
   }
 
   & regularText {
     font-weight: 300;
     font-size: 1.1rem;
+    font-size: 2vh;
     padding-bottom: 8px;
+    padding-bottom: 0.5vh;
   }
 `;
 
 export const InputText = styled.input.attrs({
   type: "text",
+  required: true,
 })`
   width: 100%;
   height: 2.3rem;
@@ -86,6 +92,7 @@ export const InputText = styled.input.attrs({
   background-color: #202020;
   color: #b0b0b0;
   font-size: 1.1rem;
+  font-size: 2.2vh;
 
   &:focus {
     background-color: #fff;
@@ -93,13 +100,29 @@ export const InputText = styled.input.attrs({
   }
 `;
 
+export const InputCheckbox = styled.input.attrs({
+  type: "checkbox",
+  required: true,
+})`
+  // appearance: none;
+  // background-color: #202020;
+  // margin: 4px 20px 0 0;
+  // color: #b0b0b0;
+  // width: 100px;
+  // height: 30px;
+  // border: 1px solid #747474;
+  outline: 1px solid #747474;
+`;
+
 export const InputLabel = styled.p`
   padding: 0 0 18px 0;
+  padding: 0 0 1.2vh 0;
   margin: 0;
   color: #b0b0b0;
   font-family: "Inter", sans-serif;
   font-weight: 300;
   font-size: 1.1rem;
+  font-size: 2vh;
 `;
 
 export const InputField = styled.div`
@@ -111,7 +134,8 @@ export const InputField = styled.div`
 export const InputRow = styled.div`
   display: flex;
   justify-content: space-between;
-  padding-top: ${(props) => (props.paddingTop ? props.paddingTop : "16px")};
+  align-items: flex-start;
+  padding-top: ${(props) => (props.paddingTop ? props.paddingTop : "1vh")};
   padding-bottom: ${(props) =>
-    props.paddingBottom ? props.paddingBottom : "16px"};
+    props.paddingBottom ? props.paddingBottom : "1vh"};
 `;

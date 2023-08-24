@@ -32,7 +32,7 @@ export const MenuPopup = ({ onMenuClick, className }) => {
           </menuLink>
         </RightCol>
       </MenuContent>
-      <MenuFooter>© 2023 Mindshare Media Ltd</MenuFooter>
+      <MenuFooter>© 2023 Monet Media</MenuFooter>
     </DisplayContainer>
   );
 };
