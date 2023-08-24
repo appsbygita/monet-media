@@ -95,7 +95,11 @@ export const HomeContainer = ({ onMenuClick, onButtonClick, className }) => {
               </Paragraph>
               <Button onClick={onButtonClick}>Express Your Interest</Button>
             </Column>
-            <HomeImage img={HomeImgOne} />
+            <HomeImage
+              isVideo={true}
+              src="video/Neon.mp4"
+              // src="https://drive.google.com/drive/u/0/folders/1ATWaCm2P6O2YYwby7vF27BfQwagaIySY"
+            />
           </Row>
           <Row>
             <HomeImage img={HomeImgTwo} />
