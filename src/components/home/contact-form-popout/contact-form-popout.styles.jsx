@@ -122,7 +122,7 @@ export const RightCol = styled.div`
 `;
 
 export const InputText = styled.input.attrs({
-  type: "text",
+  type: (props) => (props.type ? props.type : "text"),
   required: true,
 })`
   width: 100%;

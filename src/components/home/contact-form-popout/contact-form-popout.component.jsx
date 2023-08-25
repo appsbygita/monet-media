@@ -47,27 +47,29 @@ export const ContactFormPopout = ({ onButtonClick, className }) => {
             Media
           </regularText>
           <titleText>Contact Detail</titleText>
-          <form>
+          <form id="waitlist-form">
             <InputRow>
               <InputField width="48%">
                 <InputLabel>First Name</InputLabel>
-                <InputText />
+                <InputText id="firstname" name="firstname" />
               </InputField>
               <InputField width="48%">
                 <InputLabel>Last Name</InputLabel>
-                <InputText />
+                <InputText id="lastname" name="lastname" />
               </InputField>
             </InputRow>
             <InputRow>
               <InputField>
                 <InputLabel>Email</InputLabel>
-                <InputText />
+                <InputText type="email" id="email" name="email" />
               </InputField>
             </InputRow>
             <InputRow>
               <InputField>
                 <InputLabel>Country</InputLabel>
                 <CountrySelect
+                  id="country_code"
+                  name="country_code"
                   required
                   theme={selectTheme}
                   styles={customStyles}
@@ -78,6 +80,8 @@ export const ContactFormPopout = ({ onButtonClick, className }) => {
               <InputField>
                 <InputLabel>Area of Interest</InputLabel>
                 <Select
+                  id="area_of_interest"
+                  name="area_of_interest"
                   required
                   isSearchable={false}
                   options={interestOptions}

@@ -158,7 +158,7 @@ export const HomeContainer = ({ onMenuClick, onButtonClick, className }) => {
                 <PartnerLogoContainer>
                   <PartnerLogo src={SplashLogo} />
                   <name>Splash</name>
-                  <description>Gaming</description>
+                  <description>Web3 Community</description>
                 </PartnerLogoContainer>
               </a>
               <a
@@ -300,7 +300,7 @@ export const HomeContainer = ({ onMenuClick, onButtonClick, className }) => {
           </GalleryTextContainer>
           <Gallery />
           <Row align="center">
-            <Button>Load More</Button>
+            <Button onClick={onButtonClick}>Express Your Interest</Button>
           </Row>
         </GallerySection>
       </DarkerSection>
@@ -317,7 +317,7 @@ export const HomeContainer = ({ onMenuClick, onButtonClick, className }) => {
                   Privacy Policy
                 </a>
                 <a className="a1" href="#">
-                  Term of Use
+                  Terms of Use
                 </a>
               </group>
               <SocialLinks />
