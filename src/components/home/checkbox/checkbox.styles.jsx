@@ -22,6 +22,7 @@ export const CheckboxWrapper = styled.div`
 
   div {
     width: 93%;
+    font-size: 1.8vh;
   }
 
   .checked {

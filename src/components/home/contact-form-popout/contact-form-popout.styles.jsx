@@ -121,10 +121,10 @@ export const RightCol = styled.div`
   }
 `;
 
-export const InputText = styled.input.attrs({
-  type: (props) => (props.type ? props.type : "text"),
+export const InputText = styled.input.attrs((props) => ({
+  type: props.type ? props.type : "text",
   required: true,
-})`
+}))`
   width: 100%;
   height: 2.3rem;
   border: 1px solid #747474;
@@ -159,9 +159,15 @@ export const InputField = styled.div`
 
 export const InputRow = styled.div`
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  justify-content: ${(props) =>
+    props.justify ? props.justifyf : "space-between"};
+  align-items: center;
   padding-top: ${(props) => (props.paddingTop ? props.paddingTop : "1vh")};
   padding-bottom: ${(props) =>
     props.paddingBottom ? props.paddingBottom : "1vh"};
+
+  span.submit-message {
+    padding-left: 12px;
+    font-size: 2.5vh;
+  }
 `;

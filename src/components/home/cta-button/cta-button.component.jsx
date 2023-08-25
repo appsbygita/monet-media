@@ -5,9 +5,10 @@ export const CTAButton = ({
   onClick,
   width = "30rem",
   height = "5rem",
+  ...props
 }) => {
   return (
-    <Button onClick={onClick} width={width} height={height}>
+    <Button {...props} onClick={onClick} width={width} height={height}>
       <cta>{children}</cta> <ButtonIcon />
     </Button>
   );

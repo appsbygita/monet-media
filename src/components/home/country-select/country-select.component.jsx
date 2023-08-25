@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import Select from "react-select";
 
-export const CountrySelect = ({ theme, styles }) => {
+export const CountrySelect = ({ theme, styles, value, onChange }) => {
   const [countries, setCountries] = useState([]);
-  const [selectedCountry, setSelectedCountry] = useState({});
+  // const [selectedCountry, setSelectedCountry] = useState(value);
 
   useEffect(() => {
     fetch(
@@ -12,14 +12,15 @@ export const CountrySelect = ({ theme, styles }) => {
       .then((response) => response.json())
       .then((data) => {
         setCountries(data.countries);
-        setSelectedCountry(data.userSelectValue);
+        // setSelectedCountry(data.userSelectValue.value);
       });
+    // console.log("init country ", selectedCountry);
   }, []);
   return (
     <Select
       options={countries}
-      value={selectedCountry}
-      onChange={(selectedOption) => setSelectedCountry(selectedOption)}
+      value={value}
+      onChange={onChange}
       theme={theme}
       styles={styles}
     />
