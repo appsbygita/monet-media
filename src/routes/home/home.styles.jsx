@@ -3,6 +3,8 @@ import { styled } from "styled-components";
 import { MenuPopup } from "../../components/home/menu-popup/menu-popup.component";
 import { HomeContainer } from "../../components/home/home-container/home-container.component";
 import { ContactFormPopout } from "../../components/home/contact-form-popout/contact-form-popout.component";
+import { PrivacyPopout } from "../../components/home/privacy-popout/privacy-popout.component";
+import { TermsPopout } from "../../components/home/terms-popout/terms-popout.component";
 
 export const HomePage = styled(HomeContainer).attrs((props) => ({
   className: props.className,
@@ -85,6 +87,74 @@ export const ContactOverlay = styled(ContactFormPopout).attrs((props) => ({
 
   &.hide {
     animation: contactOut 1s;
+    display: none;
+  }
+`;
+
+export const PrivacyOverlay = styled(PrivacyPopout).attrs((props) => ({
+  className: props.className,
+}))`
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+
+  @keyframes privacyIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes privacyOut {
+    from {
+      display: block;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+
+  animation: privacyIn 1s;
+
+  &.hide {
+    animation: privacyOut 1s;
+    display: none;
+  }
+`;
+
+export const TermsOverlay = styled(TermsPopout).attrs((props) => ({
+  className: props.className,
+}))`
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+
+  @keyframes termsIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes termsOut {
+    from {
+      display: block;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+
+  animation: termsIn 1s;
+
+  &.hide {
+    animation: termsOut 1s;
     display: none;
   }
 `;

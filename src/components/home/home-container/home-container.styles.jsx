@@ -130,13 +130,17 @@ export const FooterMenu = styled.div`
 
   & group {
     padding-bottom: 30px;
-    & a {
+    & div {
       display: block;
       color: #d2f950;
       font-weight: 800;
       text-decoration: none;
       text-transform: uppercase;
       font-size: 1.2rem;
+
+      &:hover {
+        cursor: pointer;
+      }
     }
   }
 `;
