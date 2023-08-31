@@ -14,9 +14,9 @@ export const GalleryColumnContainer = styled.div`
   position: relative;
   top: ${(props) => props.top};
   width: 32%;
+  height: fit-content;
 
   @media screen and (max-width: 800px) {
     width: 48%;
-    height: fit-content;
   }
 `;
