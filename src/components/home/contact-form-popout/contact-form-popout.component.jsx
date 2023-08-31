@@ -16,10 +16,13 @@ import {
   selectTheme,
 } from "./contact-form-popout.styles";
 import Checkbox from "../checkbox/checkbox.component";
+import { FooterLogo, Navbar } from "../home-container/home-container.styles";
+import { Logo } from "../logo/logo.component";
 import { SocialLinks } from "../social-links/social-links.component";
 import Spinner from "../../spinner/spinner.component";
 
 import CloseIcon from "../../../assets/close.svg";
+import MobileCloseIcon from "../../../assets/icons/close-mobile.svg";
 import { CTAButton } from "../cta-button/cta-button.component";
 import { CountrySelect } from "../country-select/country-select.component";
 
@@ -121,6 +124,16 @@ export const ContactFormPopout = ({ onButtonClick, className }) => {
 
   return (
     <DisplayContainer className={className}>
+      <Navbar>
+        <FooterLogo>
+          <Logo isStatic={true} />
+        </FooterLogo>
+        <img
+          onClick={closeButtonClick}
+          src={MobileCloseIcon}
+          alt="Close button"
+        />
+      </Navbar>
       <TopRow>
         <CloseButton src={CloseIcon} onClick={closeButtonClick} />
       </TopRow>
@@ -129,7 +142,9 @@ export const ContactFormPopout = ({ onButtonClick, className }) => {
           <p>
             Join <b>the waitlist</b> today
           </p>
-          <SocialLinks />
+          <div className="nomobile">
+            <SocialLinks />
+          </div>
         </LeftCol>
         <RightCol>
           <regularText>
@@ -201,7 +216,7 @@ export const ContactFormPopout = ({ onButtonClick, className }) => {
                 />
               </InputField>
             </InputRow>
-            <InputRow>
+            <InputRow className="checkbox">
               <Checkbox
                 label="By submitting this form, you consent to receive messages from
                   all Monet Group platforms. These may be about our products,

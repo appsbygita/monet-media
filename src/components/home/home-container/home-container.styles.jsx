@@ -1,6 +1,7 @@
 import { styled } from "styled-components";
 import HeroBg from "../../../assets/hero-bg.webp";
 import ContributorBg from "../../../assets/image/back-3.jpeg";
+import { Logo } from "../logo/logo.component";
 
 export const Container = styled.div`
   width: 100vw;
@@ -98,6 +99,10 @@ export const CenterDiv = styled.div`
   height: 80%;
   align-items: center;
   justify-content: center;
+
+  @media screen and (max-width: 800px) {
+    text-align: center;
+  }
 `;
 
 export const HeroDiv = styled.div`
@@ -111,6 +116,19 @@ export const HeroDiv = styled.div`
   @media screen and (max-width: 800px) {
     flex: 1;
     justify-content: center;
+  }
+`;
+
+export const MobileHeroLogo = styled.div`
+  display: none;
+
+  @media screen and (max-width: 800px) {
+    display: block;
+  }
+`;
+export const HeroLogo = styled.div`
+  @media screen and (max-width: 800px) {
+    display: none;
   }
 `;
 
@@ -193,6 +211,21 @@ export const LogoRow = styled.div`
   & a {
     text-decoration: none;
   }
+
+  @media screen and (max-width: 800px) {
+    flex-direction: column;
+    width: 50%;
+  }
+`;
+
+export const LogoRowContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (max-width: 800px) {
+    width: 100%;
+    flex-direction: row;
+  }
 `;
 
 export const HomeTitle = styled.div`
@@ -254,6 +287,7 @@ export const PartnerLogoContainer = styled.div`
   align-items: center;
   justify-content: center;
   border-radius: 30px;
+  text-align: center;
 
   @keyframes slidein {
     from {
@@ -299,12 +333,36 @@ export const PartnerLogoContainer = styled.div`
     font-size: 0.8rem;
     color: #fff;
   }
+
+  @media screen and (max-width: 800px) {
+    background-color: #2b2634;
+    width: 90%;
+    height: 50vw;
+
+    & name,
+    description {
+      display: block;
+      font-size: 0.7rem;
+    }
+
+    & img {
+      filter: none;
+    }
+  }
+
+  @media screen and (max-width: 470px) {
+  }
 `;
 
 export const PartnerLogo = styled.img`
   width: 120px;
   height: 120px;
   filter: grayscale(100%);
+
+  @media screen and (max-width: 470px) {
+    width: 20vw;
+    height: 20vw;
+  }
 `;
 
 export const GalleryTextContainer = styled.div`

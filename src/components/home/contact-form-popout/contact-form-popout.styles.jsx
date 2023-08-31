@@ -45,6 +45,7 @@ export const DisplayContainer = styled.div`
   width: 100vw;
   height: 100vh;
   background: #202020;
+  overflow-y: scroll;
 `;
 
 export const TopRow = styled.div`
@@ -53,6 +54,10 @@ export const TopRow = styled.div`
   margin: 0 auto;
   padding: 40px 0;
   justify-content: flex-end;
+
+  @media screen and (max-width: 800px) {
+    display: none;
+  }
 `;
 
 export const PopupContent = styled.div`
@@ -61,6 +66,10 @@ export const PopupContent = styled.div`
   width: 80%;
   margin: 0 auto;
   padding-bottom: 60px;
+
+  @media screen and (max-width: 800px) {
+    flex-direction: column;
+  }
 `;
 
 export const CloseButton = styled.img`
@@ -92,6 +101,16 @@ export const LeftCol = styled.div`
       font-weight: 800;
     }
   }
+
+  @media screen and (max-width: 800px) {
+    height: auto;
+    width: 100%;
+    padding: 0;
+
+    & .nomobile {
+      display: none;
+    }
+  }
 `;
 
 export const RightCol = styled.div`
@@ -106,7 +125,6 @@ export const RightCol = styled.div`
     font-family: "Unbounded", sans-serif;
     font-weight: 700;
     font-size: 1.5rem;
-    font-size: 3.5vh;
     padding: 20px 0;
     padding: 2vh 0;
     color: #d2f950;
@@ -115,9 +133,12 @@ export const RightCol = styled.div`
   & regularText {
     font-weight: 300;
     font-size: 1.1rem;
-    font-size: 2vh;
     padding-bottom: 8px;
     padding-bottom: 0.5vh;
+  }
+
+  @media screen and (max-width: 800px) {
+    width: 100%;
   }
 `;
 
@@ -147,14 +168,20 @@ export const InputLabel = styled.p`
   color: #b0b0b0;
   font-family: "Inter", sans-serif;
   font-weight: 300;
-  font-size: 1.1rem;
-  font-size: 2vh;
+  font-size: 1rem;
 `;
 
 export const InputField = styled.div`
   display: flex;
   flex-direction: column;
   width: ${(props) => (props.width ? props.width : "100%")};
+  padding-top: ${(props) => (props.paddingTop ? props.paddingTop : "12px")};
+  padding-bottom: ${(props) =>
+    props.paddingBottom ? props.paddingBottom : "12px"};
+
+  @media screen and (max-width: 800px) {
+    width: 100%;
+  }
 `;
 
 export const InputRow = styled.div`
@@ -162,12 +189,17 @@ export const InputRow = styled.div`
   justify-content: ${(props) =>
     props.justify ? props.justifyf : "space-between"};
   align-items: center;
-  padding-top: ${(props) => (props.paddingTop ? props.paddingTop : "1vh")};
-  padding-bottom: ${(props) =>
-    props.paddingBottom ? props.paddingBottom : "1vh"};
 
   span.submit-message {
     padding-left: 12px;
     font-size: 2.5vh;
+  }
+
+  &.checkbox {
+    padding: 12px 0 20px 0;
+  }
+
+  @media screen and (max-width: 800px) {
+    flex-direction: column;
   }
 `;

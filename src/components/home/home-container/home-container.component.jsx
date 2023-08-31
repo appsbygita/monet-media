@@ -26,12 +26,16 @@ import {
   VerticalLine,
   HeroDiv,
   Navbar,
+  HeroLogo,
+  MobileHeroLogo,
+  LogoRowContainer,
 } from "./home-container.styles";
 import { TitleText, ContentText, Paragraph } from "../../text/text.styles";
 import { Spacer } from "../../spacer/spacer.styles";
 import { CTAButton as Button } from "../cta-button/cta-button.component";
 import { HomeImage } from "../home-image/home-image.component";
 import { SocialLinks } from "../social-links/social-links.component";
+import { useScreenSize } from "../../../utils/screen/screen";
 
 import { Logo } from "../logo/logo.component";
 import HomeImgTwo from "../../../assets/image/home-img-2.webp";
@@ -57,6 +61,8 @@ export const HomeContainer = ({
   onTermsClick,
   className,
 }) => {
+  const screenSize = useScreenSize();
+  // console.log("screen ", screenSize);
   return (
     <Container className={className}>
       <Navbar>
@@ -71,7 +77,7 @@ export const HomeContainer = ({
             <MenuButton onClick={onMenuClick}>Menu</MenuButton>
           </Header>
           <HeroDiv>
-            <Logo isHero="hero" />
+            {screenSize.width <= 800 ? <Logo isHero="hero" /> : <Logo />}
             <HomeTitle>
               <TitleText>
                 <span id="one">Where Creativity</span>{" "}
@@ -155,112 +161,118 @@ export const HomeContainer = ({
                 to provide specialized products, services, or expertise.
               </center>
             </Paragraph>
-            <LogoRow>
-              <a
-                href="https://www.cur8labs.io/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <PartnerLogoContainer>
-                  <PartnerLogo src={Cur8Logo} />
-                  <name>Cur8</name>
-                  <description>Display</description>
-                </PartnerLogoContainer>
-              </a>
-              <a
-                href="https://www.splash.club/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <PartnerLogoContainer>
-                  <PartnerLogo src={SplashLogo} />
-                  <name>Splash</name>
-                  <description>Web3 Community</description>
-                </PartnerLogoContainer>
-              </a>
-              <a
-                href="https://www.theartbank.io/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <PartnerLogoContainer>
-                  <PartnerLogo src={ArtbankLogo} />
-                  <name>The Art Bank</name>
-                  <description>Art Promotion</description>
-                </PartnerLogoContainer>
-              </a>
-              <a
-                href="https://www.blockgen.art/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <PartnerLogoContainer>
-                  <PartnerLogo src={BlockgenLogo} />
-                  <name>Blockgen</name>
-                  <description>Algorithmic NFTs</description>
-                </PartnerLogoContainer>
-              </a>
-              <a
-                href="https://www.cardanocenters.io/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <PartnerLogoContainer>
-                  <PartnerLogo src={CardanoCenterLogo} />
-                  <name>Cardano Centers</name>
-                  <description>Cardano Outreach</description>
-                </PartnerLogoContainer>
-              </a>
-            </LogoRow>
-            <LogoRow>
-              <a
-                href="http://www.artboardz.net/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <PartnerLogoContainer>
-                  <PartnerLogo src={ArtboardzLogo} />
-                  <name>Artboardz</name>
-                  <description>NFT Murals</description>
-                </PartnerLogoContainer>
-              </a>
-              <a
-                href="https://www.africaonchain.io/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <PartnerLogoContainer>
-                  <PartnerLogo src={AfricaLogo} />
-                  <name>Africa On Chain</name>
-                  <description>Podcast</description>
-                </PartnerLogoContainer>
-              </a>
-              <a href="https://cardania.com/" target="_blank" rel="noreferrer">
-                <PartnerLogoContainer>
-                  <PartnerLogo src={CardaniaLogo} />
-                  <name>Cardania</name>
-                  <description>Metaverse</description>
-                </PartnerLogoContainer>
-              </a>
-              <a
-                href="https://niftyslabs.com/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <PartnerLogoContainer>
-                  <PartnerLogo src={NiftyLogo} />
-                  <name>NiftySlabs</name>
-                  <description>Physical Collectible Cards</description>
-                </PartnerLogoContainer>
-              </a>
-              <a href="https://adarealm.io/" target="_blank" rel="noreferrer">
-                <PartnerLogoContainer>
-                  <PartnerLogo src={OmniLogo} />
-                  <name>OmniBlock</name>
-                  <description>Metaverse</description>
-                </PartnerLogoContainer>
-              </a>
-            </LogoRow>
+            <LogoRowContainer>
+              <LogoRow>
+                <a
+                  href="https://www.cur8labs.io/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <PartnerLogoContainer>
+                    <PartnerLogo src={Cur8Logo} />
+                    <name>Cur8</name>
+                    <description>Display</description>
+                  </PartnerLogoContainer>
+                </a>
+                <a
+                  href="https://www.splash.club/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <PartnerLogoContainer>
+                    <PartnerLogo src={SplashLogo} />
+                    <name>Splash</name>
+                    <description>Web3 Community</description>
+                  </PartnerLogoContainer>
+                </a>
+                <a
+                  href="https://www.theartbank.io/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <PartnerLogoContainer>
+                    <PartnerLogo src={ArtbankLogo} />
+                    <name>The Art Bank</name>
+                    <description>Art Promotion</description>
+                  </PartnerLogoContainer>
+                </a>
+                <a
+                  href="https://www.blockgen.art/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <PartnerLogoContainer>
+                    <PartnerLogo src={BlockgenLogo} />
+                    <name>Blockgen</name>
+                    <description>Algorithmic NFTs</description>
+                  </PartnerLogoContainer>
+                </a>
+                <a
+                  href="https://www.cardanocenters.io/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <PartnerLogoContainer>
+                    <PartnerLogo src={CardanoCenterLogo} />
+                    <name>Cardano Centers</name>
+                    <description>Cardano Outreach</description>
+                  </PartnerLogoContainer>
+                </a>
+              </LogoRow>
+              <LogoRow>
+                <a
+                  href="http://www.artboardz.net/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <PartnerLogoContainer>
+                    <PartnerLogo src={ArtboardzLogo} />
+                    <name>Artboardz</name>
+                    <description>NFT Murals</description>
+                  </PartnerLogoContainer>
+                </a>
+                <a
+                  href="https://www.africaonchain.io/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <PartnerLogoContainer>
+                    <PartnerLogo src={AfricaLogo} />
+                    <name>Africa On Chain</name>
+                    <description>Podcast</description>
+                  </PartnerLogoContainer>
+                </a>
+                <a
+                  href="https://cardania.com/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <PartnerLogoContainer>
+                    <PartnerLogo src={CardaniaLogo} />
+                    <name>Cardania</name>
+                    <description>Metaverse</description>
+                  </PartnerLogoContainer>
+                </a>
+                <a
+                  href="https://niftyslabs.com/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <PartnerLogoContainer>
+                    <PartnerLogo src={NiftyLogo} />
+                    <name>NiftySlabs</name>
+                    <description>Physical Collectible Cards</description>
+                  </PartnerLogoContainer>
+                </a>
+                <a href="https://adarealm.io/" target="_blank" rel="noreferrer">
+                  <PartnerLogoContainer>
+                    <PartnerLogo src={OmniLogo} />
+                    <name>OmniBlock</name>
+                    <description>Metaverse</description>
+                  </PartnerLogoContainer>
+                </a>
+              </LogoRow>
+            </LogoRowContainer>
           </CenterDiv>
         </Content>
       </LightSection>
