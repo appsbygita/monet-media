@@ -28,7 +28,6 @@ export const ContentText = styled.span`
   }
 
   @media screen and (max-width: 500px) {
-    font-size: 2rem;
   }
 `;
 

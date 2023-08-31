@@ -15,7 +15,6 @@ export const Logo = ({ isStatic, isHero }) => {
 
   useEffect(() => {
     setWidth(ref.current.clientWidth * 0.1);
-    console.log("wid ", width);
   }, [ref]);
 
   return (

@@ -45,6 +45,16 @@ export const ContributorSection = styled.div`
   z-index: 0;
 `;
 
+export const ContributorSectionSpace = styled.div`
+  display: none;
+
+  @media screen and (max-width: 800px) {
+    display: block;
+    position: relative;
+    height: 50vw;
+  }
+`;
+
 export const ContributorImageContainer = styled.div`
   width: 60%;
   height: 70%;
@@ -52,6 +62,13 @@ export const ContributorImageContainer = styled.div`
   top: 0%;
   left: 50%;
   z-index: 0;
+
+  @media screen and (max-width: 800px) {
+    width: 100%;
+    left: 0%;
+    z-index: -999;
+    height: 100vw;
+  }
 `;
 
 export const ContributorImage = styled.div`
@@ -61,6 +78,10 @@ export const ContributorImage = styled.div`
   background-position: -209px -2px;
   background-size: 100%;
   background-repeat: no-repeat;
+
+  @media screen and (max-width: 800px) {
+    background-position: -50px 0px;
+  }
 `;
 
 export const Content = styled.div`
@@ -76,10 +97,26 @@ export const Content = styled.div`
   }
 `;
 
+export const FooterLogo = styled.div`
+  display: flex;
+  width: ${(props) => (props.width ? props.width : "30%")};
+  align-items: flex-start;
+`;
+
 export const Footer = styled.div`
   display: flex;
   width: 100%;
   justify-content: space-between;
+
+  @media screen and (max-width: 800px) {
+    flex-direction: column;
+
+    ${FooterLogo} {
+      width: 60%;
+      margin: 0 auto;
+      padding-bottom: 40px;
+    }
+  }
 `;
 
 export const Header = styled.div`
@@ -119,19 +156,6 @@ export const HeroDiv = styled.div`
   }
 `;
 
-export const MobileHeroLogo = styled.div`
-  display: none;
-
-  @media screen and (max-width: 800px) {
-    display: block;
-  }
-`;
-export const HeroLogo = styled.div`
-  @media screen and (max-width: 800px) {
-    display: none;
-  }
-`;
-
 export const Column = styled.div`
   display: flex;
   width: ${(props) => (props.width ? props.width : "55%")};
@@ -154,12 +178,6 @@ export const VerticalLine = styled.div`
   @media screen and (max-width: 800px) {
     display: none;
   }
-`;
-
-export const FooterLogo = styled.div`
-  display: flex;
-  width: ${(props) => (props.width ? props.width : "30%")};
-  align-items: flex-start;
 `;
 
 export const FooterMenu = styled.div`
@@ -187,6 +205,11 @@ export const FooterMenu = styled.div`
       }
     }
   }
+
+  @media screen and (max-width: 800px) {
+    width: 100%;
+    padding-bottom: 40px;
+  }
 `;
 
 export const Row = styled.div`
@@ -197,6 +220,8 @@ export const Row = styled.div`
 
   @media screen and (max-width: 800px) {
     flex-direction: column;
+    padding: 12px 0;
+    width: 100%;
 
     &#approach-1 {
       flex-direction: column-reverse;
@@ -368,12 +393,20 @@ export const PartnerLogo = styled.img`
 export const GalleryTextContainer = styled.div`
   position: absolute;
   width: 35%;
+
+  @media screen and (max-width: 800px) {
+    width: 100%;
+  }
 `;
 
 export const GallerySection = styled.div`
   width: 80%;
   margin: 0 auto;
   padding: 40px 0;
+
+  @media screen and (max-width: 800px) {
+    width: 100%;
+  }
 `;
 
 export const Navbar = styled.div`

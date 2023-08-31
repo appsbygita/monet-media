@@ -26,9 +26,8 @@ import {
   VerticalLine,
   HeroDiv,
   Navbar,
-  HeroLogo,
-  MobileHeroLogo,
   LogoRowContainer,
+  ContributorSectionSpace,
 } from "./home-container.styles";
 import { TitleText, ContentText, Paragraph } from "../../text/text.styles";
 import { Spacer } from "../../spacer/spacer.styles";
@@ -284,9 +283,11 @@ export const HomeContainer = ({
           </SectionTitle>
           <Row>
             <Column width="47%">
-              <ContentText>
-                Are you <b>a Creator?</b>
-              </ContentText>
+              <CenterDiv>
+                <ContentText>
+                  Are you <b>a Creator?</b>
+                </ContentText>
+              </CenterDiv>
               <Paragraph>
                 Monet Media empowers creativity through a robust reward system
                 backed by blockchain. Our AI system sources content from
@@ -323,14 +324,18 @@ export const HomeContainer = ({
       <DarkerSection>
         <GallerySection>
           <GalleryTextContainer>
-            <ContentText>
-              <b>Explore</b> the content creators to get <b>Inspired</b>
-            </ContentText>
+            <CenterDiv>
+              <ContentText>
+                <b>Explore</b> the content creators to get <b>Inspired</b>
+              </ContentText>
+            </CenterDiv>
           </GalleryTextContainer>
-          <Gallery />
-          <Row align="center">
-            <Button onClick={onButtonClick}>Express Your Interest</Button>
-          </Row>
+          <Gallery screenSize={screenSize.width} />
+          <Content>
+            <Row align="center">
+              <Button onClick={onButtonClick}>Express Your Interest</Button>
+            </Row>
+          </Content>
         </GallerySection>
       </DarkerSection>
 

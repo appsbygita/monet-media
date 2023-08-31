@@ -66,4 +66,8 @@ export const ImageContainerWrapper = styled.div`
       transition: all 0.5s ease-in-out;
     }
   }
+
+  @media screen and (max-width: 800px) {
+    height: 65vw;
+  }
 `;
