@@ -31,6 +31,10 @@ export const HeroSection = styled.div`
   background-repeat: no-repeat;
   background-position: center;
   align-items: center;
+
+  @media screen and (max-width: 800px) {
+    height: 700px;
+  }
 `;
 
 export const ContributorSection = styled.div`
@@ -65,6 +69,10 @@ export const Content = styled.div`
   height: 100%;
   margin: 0 auto;
   padding: ${(props) => (props.padding ? props.padding : "40px")} 0;
+
+  @media screen and (max-width: 800px) {
+    width: 80%;
+  }
 `;
 
 export const Footer = styled.div`
@@ -77,6 +85,10 @@ export const Header = styled.div`
   display: flex;
   justify-content: flex-end;
   padding-top: 40px;
+
+  @media screen and (max-width: 800px) {
+    display: none;
+  }
 `;
 
 export const CenterDiv = styled.div`
@@ -95,12 +107,22 @@ export const HeroDiv = styled.div`
   height: 65%;
   align-items: center;
   justify-content: flex-end;
+
+  @media screen and (max-width: 800px) {
+    flex: 1;
+    justify-content: center;
+  }
 `;
 
 export const Column = styled.div`
   display: flex;
   width: ${(props) => (props.width ? props.width : "55%")};
   flex-direction: column;
+
+  @media screen and (max-width: 800px) {
+    width: 100%;
+    margin: 0 auto;
+  }
 `;
 
 export const VerticalLine = styled.div`
@@ -110,11 +132,15 @@ export const VerticalLine = styled.div`
   flex: 1;
   border-left: 1.5px solid #fff;
   border-right: 1.5px solid #fff;
+
+  @media screen and (max-width: 800px) {
+    display: none;
+  }
 `;
 
 export const FooterLogo = styled.div`
   display: flex;
-  width: 30%;
+  width: ${(props) => (props.width ? props.width : "30%")};
   align-items: flex-start;
 `;
 
@@ -172,6 +198,10 @@ export const LogoRow = styled.div`
 export const HomeTitle = styled.div`
   text-align: center;
   line-height: 4.5rem;
+
+  @media screen and (max-width: 800px) {
+    line-height: 2.2rem;
+  }
 `;
 
 export const MenuButton = styled.button`
@@ -286,4 +316,28 @@ export const GallerySection = styled.div`
   width: 80%;
   margin: 0 auto;
   padding: 40px 0;
+`;
+
+export const Navbar = styled.div`
+  display: none;
+  box-sizing: border-box;
+  width: 100%;
+  height: 80px;
+  background-color: #000;
+  padding: 0 30px;
+
+  @media screen and (max-width: 800px) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    ${FooterLogo} {
+      width: 40%;
+    }
+  }
+
+  @media screen and (max-width: 550px) {
+    ${FooterLogo} {
+      width: 50%;
+    }
+  }
 `;

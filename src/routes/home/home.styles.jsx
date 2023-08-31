@@ -49,11 +49,37 @@ export const MenuOverlay = styled(MenuPopup).attrs((props) => ({
     }
   }
 
+  @keyframes menuMobileIn {
+    0% {
+      transform: translate(100vw, 0px);
+    }
+    100% {
+      transform: translate(0px, 0px);
+    }
+  }
+
+  @keyframes menuMobileOut {
+    from {
+      display: block;
+    }
+    to {
+      transform: translate(100vw, 0px);
+    }
+  }
+
   animation: menuIn 1s;
 
   &.hide {
     animation: menuOut 1s;
     display: none;
+  }
+
+  @media screen and (max-width: 800px) {
+    animation: menuMobileIn 1s;
+
+    &.hide {
+      animation: menuMobileOut 1s;
+    }
   }
 `;
 

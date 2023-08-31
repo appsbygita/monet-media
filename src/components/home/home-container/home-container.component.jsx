@@ -25,6 +25,7 @@ import {
   FooterLogo,
   VerticalLine,
   HeroDiv,
+  Navbar,
 } from "./home-container.styles";
 import { TitleText, ContentText, Paragraph } from "../../text/text.styles";
 import { Spacer } from "../../spacer/spacer.styles";
@@ -47,6 +48,8 @@ import NiftyLogo from "../../../assets/logo/nifty.png";
 import OmniLogo from "../../../assets/logo/omni.png";
 import { Gallery } from "../../gallery/gallery.component";
 
+import Hamburger from "../../../assets/icons/hamburger.svg";
+
 export const HomeContainer = ({
   onMenuClick,
   onButtonClick,
@@ -56,15 +59,24 @@ export const HomeContainer = ({
 }) => {
   return (
     <Container className={className}>
+      <Navbar>
+        <FooterLogo>
+          <Logo isStatic={true} />
+        </FooterLogo>
+        <img onClick={onMenuClick} src={Hamburger} alt="Menu button" />
+      </Navbar>
       <HeroSection>
         <Content padding="0">
           <Header>
             <MenuButton onClick={onMenuClick}>Menu</MenuButton>
           </Header>
           <HeroDiv>
-            <Logo />
+            <Logo isHero="hero" />
             <HomeTitle>
-              <TitleText>Where Creativity Meets Innovation</TitleText>
+              <TitleText>
+                <span id="one">Where Creativity</span>{" "}
+                <span id="two">Meets Innovation</span>
+              </TitleText>
             </HomeTitle>
             <Spacer />
             <Spacer />

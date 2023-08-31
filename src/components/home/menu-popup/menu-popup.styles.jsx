@@ -21,6 +21,10 @@ export const MenuContent = styled.div`
   flex: 1;
   width: 80%;
   margin: 0 auto;
+
+  @media screen and (max-width: 800px) {
+    flex-direction: column-reverse;
+  }
 `;
 
 export const LeftCol = styled.div`
@@ -29,6 +33,10 @@ export const LeftCol = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+
+  @media screen and (max-width: 800px) {
+    width: 100%;
+  }
 `;
 
 export const RightCol = styled.div`
@@ -53,6 +61,19 @@ export const RightCol = styled.div`
     & a {
       text-decoration: none;
       color: #aaa;
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    padding: 0;
+
+    & menuTitle {
+      font-size: 1.2rem;
+      padding: 24px 0;
+    }
+
+    & menuLink {
+      font-size: 1.5rem;
     }
   }
 `;

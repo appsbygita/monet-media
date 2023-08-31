@@ -5,6 +5,15 @@ export const TitleText = styled.span`
   font-family: "Unbounded", sans-serif;
   font-size: 3rem;
   color: #d2f950;
+
+  @media screen and (max-width: 800px) {
+    #one {
+      color: #fff;
+    }
+    #two {
+      font-weight: 800;
+    }
+  }
 `;
 
 export const ContentText = styled.span`
@@ -17,6 +26,10 @@ export const ContentText = styled.span`
     font-weight: 800;
     color: #d2f950;
   }
+
+  @media screen and (max-width: 500px) {
+    font-size: 2rem;
+  }
 `;
 
 export const Paragraph = styled.p`
@@ -27,5 +40,9 @@ export const Paragraph = styled.p`
 
   & center {
     text-align: center;
+  }
+
+  @media screen and (max-width: 500px) {
+    font-size: 1rem;
   }
 `;

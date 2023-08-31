@@ -8,7 +8,7 @@ import { LogoCanvas } from "../../logo-canvas/logo-canvas.component";
 
 import { LogoContainer, LogoSpace } from "./logo.styles";
 
-export const Logo = ({ isStatic }) => {
+export const Logo = ({ isStatic, isHero }) => {
   const [width, setWidth] = useState(0);
   // const [scriptUrl, setScriptUrl] = useState("");
   const ref = useRef(null);
@@ -19,15 +19,15 @@ export const Logo = ({ isStatic }) => {
 
   return (
     <LogoContainer ref={ref}>
-      <img className="nomobile" src={M} alt="logo part 1" width="11%" />
+      <img className={isHero} src={M} alt="logo part 1" width="11%" />
       {isStatic ? (
         <img src={Sun} alt="logo part 2" width="15%" />
       ) : (
-        <LogoCanvas width={width} />
+        <LogoCanvas width={isHero ? width * 3 : width} />
       )}
-      <img className="nomobile" src={Net} alt="logo part 3" width="24%" />
-      <LogoSpace />
-      <img className="nomobile" src={Media} alt="logo part 4" width="40%" />
+      <img className={isHero} src={Net} alt="logo part 3" width="24%" />
+      <LogoSpace className={isHero} />
+      <img className={isHero} src={Media} alt="logo part 4" width="40%" />
     </LogoContainer>
   );
 };

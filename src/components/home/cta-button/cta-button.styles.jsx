@@ -47,4 +47,16 @@ export const Button = styled.button`
       animation: slide 0.8s;
     }
   }
+
+  @media screen and (max-width: 800px) {
+    width: 100%;
+
+    background-color: #d2f950;
+    color: #000;
+    font-size: 1rem;
+
+    & ${ButtonIcon} {
+      display: inline;
+    }
+  }
 `;

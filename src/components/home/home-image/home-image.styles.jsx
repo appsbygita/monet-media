@@ -6,6 +6,12 @@ export const RectangleContainer = styled.div`
   height: 550px;
   position: absolute;
   z-index: 999;
+
+  @media screen and (max-width: 560px) {
+    width: 100%;
+    height: 110vw;
+    position: relative;
+  }
 `;
 
 export const ClipContainer = styled.div`
@@ -15,6 +21,11 @@ export const ClipContainer = styled.div`
   border-bottom-right-radius: 30%;
   border-top-left-radius: 30%;
   overflow: clip;
+
+  @media screen and (max-width: 560px) {
+    width: 80%;
+    height: 110vw;
+  }
 `;
 
 export const FillImage = styled.div`
@@ -52,5 +63,15 @@ export const HomeImageContainer = styled.div`
       transform: scale(1.6) rotate(45deg);
       transition: transform 0.7s;
     }
+  }
+
+  @media screen and (max-width: 800px) {
+    margin: 0 auto;
+    margin-bottom: 24px;
+  }
+
+  @media screen and (max-width: 560px) {
+    width: 100%;
+    height: 110vw;
   }
 `;

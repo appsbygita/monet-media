@@ -7,7 +7,7 @@ export const LogoContainer = styled.div`
   justify-content: center;
 
   @media screen and (max-width: 800px) {
-    .nomobile {
+    .hero {
       display: none;
     }
   }
@@ -15,4 +15,9 @@ export const LogoContainer = styled.div`
 
 export const LogoSpace = styled.div`
   width: 10%;
+  @media screen and (max-width: 800px) {
+    .hero {
+      display: none;
+    }
+  }
 `;
