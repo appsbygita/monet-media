@@ -19,15 +19,15 @@ export const Logo = ({ isStatic }) => {
 
   return (
     <LogoContainer ref={ref}>
-      <img src={M} alt="logo part 1" width="11%" />
+      <img className="nomobile" src={M} alt="logo part 1" width="11%" />
       {isStatic ? (
         <img src={Sun} alt="logo part 2" width="15%" />
       ) : (
         <LogoCanvas width={width} />
       )}
-      <img src={Net} alt="logo part 3" width="24%" />
+      <img className="nomobile" src={Net} alt="logo part 3" width="24%" />
       <LogoSpace />
-      <img src={Media} alt="logo part 4" width="40%" />
+      <img className="nomobile" src={Media} alt="logo part 4" width="40%" />
     </LogoContainer>
   );
 };

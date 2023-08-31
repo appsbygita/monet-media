@@ -5,6 +5,12 @@ export const LogoContainer = styled.div`
   width: 100%;
   align-items: center;
   justify-content: center;
+
+  @media screen and (max-width: 800px) {
+    .nomobile {
+      display: none;
+    }
+  }
 `;
 
 export const LogoSpace = styled.div`

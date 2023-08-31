@@ -81,7 +81,7 @@ export const HomeContainer = ({
           <SectionTitle>
             <n>01.</n> <t>Our Approach</t>
           </SectionTitle>
-          <Row>
+          <Row id="approach-1">
             <Column>
               <ContentText>
                 Monet Media <b>pioneers the intersection</b> of technology,

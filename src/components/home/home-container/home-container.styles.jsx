@@ -150,6 +150,14 @@ export const Row = styled.div`
   flex-direction: row;
   justify-content: ${(props) => (props.align ? props.align : "space-between")};
   padding: 30px 0;
+
+  @media screen and (max-width: 800px) {
+    flex-direction: column;
+
+    &#approach-1 {
+      flex-direction: column-reverse;
+    }
+  }
 `;
 
 export const LogoRow = styled.div`
@@ -200,6 +208,10 @@ export const SectionTitle = styled.div`
 
   & t {
     color: #d2f950;
+  }
+
+  @media screen and (max-width: 800px) {
+    text-align: center;
   }
 `;
 
