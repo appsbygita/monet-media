@@ -23,5 +23,5 @@ export const useScreenSize = () => {
   // }, []);
 
   // return screenSize;
-  return { width: window.innerWidth };
+  return { width: 400 };
 };
