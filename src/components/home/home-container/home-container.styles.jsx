@@ -36,6 +36,10 @@ export const HeroSection = styled.div`
   @media screen and (max-width: 800px) {
     height: 700px;
   }
+
+  @media screen and (max-width: 300px) {
+    height: 500px;
+  }
 `;
 
 export const ContributorSection = styled.div`
@@ -139,6 +143,11 @@ export const CenterDiv = styled.div`
 
   @media screen and (max-width: 800px) {
     text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    &.full-width {
+      width: 100%;
+    }
   }
 `;
 
@@ -258,7 +267,7 @@ export const HomeTitle = styled.div`
   line-height: 4.5rem;
 
   @media screen and (max-width: 800px) {
-    line-height: 2.2rem;
+    line-height: 7vw;
   }
 `;
 
@@ -299,7 +308,12 @@ export const SectionTitle = styled.div`
   }
 
   @media screen and (max-width: 800px) {
+    padding-top: 0;
     text-align: center;
+  }
+
+  @media screen and (max-width: 500px) {
+    font-size: 5vw;
   }
 `;
 

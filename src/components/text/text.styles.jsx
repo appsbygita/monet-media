@@ -14,6 +14,10 @@ export const TitleText = styled.span`
       font-weight: 800;
     }
   }
+
+  @media screen and (max-width: 500px) {
+    font-size: 10vw;
+  }
 `;
 
 export const ContentText = styled.span`
@@ -28,6 +32,10 @@ export const ContentText = styled.span`
   }
 
   @media screen and (max-width: 500px) {
+    font-size: 10vw;
+    &.body {
+      font-size: 7vw;
+    }
   }
 `;
 
@@ -42,6 +50,6 @@ export const Paragraph = styled.p`
   }
 
   @media screen and (max-width: 500px) {
-    font-size: 1rem;
+    font-size: 4vw;
   }
 `;

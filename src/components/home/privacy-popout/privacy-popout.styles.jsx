@@ -35,6 +35,13 @@ export const PopupContent = styled.div`
   h4 {
     color: #d2f950;
   }
+
+  @media screen and (max-width: 500px) {
+    width: 80%;
+    & p {
+      font-size: 4vw;
+    }
+  }
 `;
 
 export const CloseButton = styled.img`

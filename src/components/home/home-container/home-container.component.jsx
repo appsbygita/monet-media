@@ -100,7 +100,7 @@ export const HomeContainer = ({
           </SectionTitle>
           <Row id="approach-1">
             <Column>
-              <ContentText>
+              <ContentText className="body">
                 Monet Media <b>pioneers the intersection</b> of technology,
                 marketing, and creativity.
               </ContentText>
@@ -126,7 +126,7 @@ export const HomeContainer = ({
           <Row>
             <HomeImage img={HomeImgTwo} />
             <Column>
-              <ContentText>
+              <ContentText className="body">
                 Join us as we <b>reshape the future</b> of creative content,
                 fostering a vibrant community where everyone has a stake.
               </ContentText>
@@ -150,7 +150,7 @@ export const HomeContainer = ({
           <SectionTitle>
             <n>02.</n> <t>Our Ecosystem</t>
           </SectionTitle>
-          <CenterDiv>
+          <CenterDiv className="full-width">
             <ContentText>
               <b>Industry Partner</b>
             </ContentText>
@@ -325,7 +325,7 @@ export const HomeContainer = ({
         <GallerySection>
           <GalleryTextContainer>
             <CenterDiv>
-              <ContentText>
+              <ContentText className="body">
                 <b>Explore</b> the content creators to get <b>Inspired</b>
               </ContentText>
             </CenterDiv>

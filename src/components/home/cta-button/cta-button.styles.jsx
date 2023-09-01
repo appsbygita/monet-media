@@ -59,4 +59,9 @@ export const Button = styled.button`
       display: inline;
     }
   }
+
+  @media screen and (max-width: 500px) {
+    font-size: 3.2vw;
+    height: 55px;
+  }
 `;
