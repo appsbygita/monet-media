@@ -85,6 +85,7 @@ export const ContributorImage = styled.div`
 
   @media screen and (max-width: 800px) {
     background-position: -50px 0px;
+    opacity: 0.5;
   }
 `;
 
@@ -137,7 +138,6 @@ export const CenterDiv = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 80%;
   align-items: center;
   justify-content: center;
 
