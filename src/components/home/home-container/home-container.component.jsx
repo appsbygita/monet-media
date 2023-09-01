@@ -77,7 +77,7 @@ export const HomeContainer = ({
           </Header>
           <HeroDiv>
             {/* {screenSize.width <= 800 ? <Logo isHero="hero" /> : <Logo />} */}
-            <Logo isHero="hero" />
+            {/* <Logo isHero="hero" /> */}
             <HomeTitle>
               <TitleText>
                 <span id="one">Where Creativity</span>{" "}
