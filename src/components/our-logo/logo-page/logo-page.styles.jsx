@@ -7,6 +7,10 @@ export const PageContainer = styled.div`
   z-index: -999;
 `;
 
+export const FooterSection = styled.div`
+  background: #212121;
+`;
+
 export const Content = styled.div`
   width: 80%;
   margin: 0 auto;
@@ -148,6 +152,54 @@ export const FooterLogo = styled.div`
   display: flex;
   width: ${(props) => (props.width ? props.width : "30%")};
   align-items: flex-start;
+`;
+export const Footer = styled.div`
+  display: flex;
+  width: 100%;
+  padding-top: 40px;
+  justify-content: space-between;
+
+  @media screen and (max-width: 800px) {
+    flex-direction: column;
+
+    ${FooterLogo} {
+      width: 60%;
+      margin: 0 auto;
+      padding-bottom: 40px;
+    }
+  }
+`;
+
+export const FooterMenu = styled.div`
+  display: flex;
+  width: 25%;
+  flex-direction: column;
+  font-family: "Unbounded", cursive;
+  color: #d2f950;
+  padding-bottom: 100px;
+  font-weight: 800;
+  font-size: 1rem;
+
+  & group {
+    padding-bottom: 30px;
+    & div {
+      display: block;
+      color: #d2f950;
+      font-weight: 800;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 1.2rem;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    width: 100%;
+    padding-bottom: 40px;
+  }
 `;
 
 export const Navbar = styled.div`

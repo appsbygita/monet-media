@@ -14,7 +14,11 @@ import {
   PhaseTitleContainer,
   PhaseSection,
   PhaseSubtitle,
+  FooterSection,
+  Footer,
+  FooterMenu,
 } from "./logo-page.styles";
+import { SocialLinks } from "../../home/social-links/social-links.component";
 import { Logo } from "../../home/logo/logo.component";
 import { LogoCanvas } from "../../logo-canvas/logo-canvas.component";
 
@@ -22,7 +26,7 @@ import Hamburger from "../../../assets/icons/hamburger.svg";
 import PhaseOne1 from "../../../assets/logo_page/phase-one-1.png";
 import PhaseOne2 from "../../../assets/logo_page/phase-one-2.png";
 
-export const LogoPage = ({ onMenuClick }) => {
+export const LogoPage = ({ onMenuClick, onPrivacyClick, onTermsClick }) => {
   return (
     <PageContainer>
       <Navbar>
@@ -219,6 +223,22 @@ export const LogoPage = ({ onMenuClick }) => {
           </ColumnTwo>
         </Content>
       </PhaseSection>
+      <FooterSection>
+        <Content>
+          <Footer>
+            <FooterLogo>
+              <Logo isStatic={true} />
+            </FooterLogo>
+            <FooterMenu>
+              <group>
+                <div onClick={onPrivacyClick}>Privacy Policy</div>
+                <div onClick={onTermsClick}>Terms of Use</div>
+              </group>
+              <SocialLinks />
+            </FooterMenu>
+          </Footer>
+        </Content>
+      </FooterSection>
     </PageContainer>
   );
 };
