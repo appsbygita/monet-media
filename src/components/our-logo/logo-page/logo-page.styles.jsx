@@ -25,6 +25,40 @@ export const ColumnTwo = styled.div`
 export const TextDiv = styled.div`
   width: 100%;
   color: #999999;
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+
+  & p {
+    margin: 0;
+  }
+
+  & p.title {
+    color: #aaa;
+    font-family: "Unbounded", sans-serif;
+    font-weight: 700;
+    font-size: 48px;
+
+    & b {
+      color: #d2f950;
+    }
+  }
+
+  & p.title-2 {
+    color: #aaa;
+    font-family: "Unbounded", sans-serif;
+    font-weight: 400;
+    font-size: 48px;
+
+    & b {
+      color: #d2f950;
+    }
+  }
+
+  & p.pretitle {
+    font-family: "Unbounded", sans-serif;
+    color: #aaa;
+    font-size: 22px;
+  }
 `;
 
 export const PhaseTitleContainer = styled.div`

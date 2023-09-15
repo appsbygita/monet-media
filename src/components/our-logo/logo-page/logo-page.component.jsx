@@ -45,8 +45,10 @@ export const LogoPage = ({ onMenuClick }) => {
         </SectionTitle>
         <ColumnTwo>
           <TextDiv>
-            <p>Logo Art for Monet Media:</p>
-            <p>A Detailed Breakdown</p>
+            <p className="pretitle">Logo Art for Monet Media:</p>
+            <p className="title">
+              <b>A Detailed Breakdown</b>
+            </p>
             <p>
               In this artistic concept for Monet Media's logo, the design
               unfolds in three distinct phases, each contributing to a
@@ -59,13 +61,28 @@ export const LogoPage = ({ onMenuClick }) => {
       <Content>
         <PhaseTitleContainer>
           <PhaseTitle>
-            <TextDiv>Phase One</TextDiv>
+            <TextDiv>
+              <p className="pretitle">Phase</p>
+              <p className="title">
+                <b>One</b>
+              </p>
+            </TextDiv>
           </PhaseTitle>
           <PhaseTitle>
-            <TextDiv>Phase Two</TextDiv>
+            <TextDiv>
+              <p className="pretitle">Phase</p>
+              <p className="title">
+                <b>Two</b>
+              </p>
+            </TextDiv>
           </PhaseTitle>
           <PhaseTitle>
-            <TextDiv>Phase Three</TextDiv>
+            <TextDiv>
+              <p className="pretitle">Phase</p>
+              <p className="title">
+                <b>Three</b>
+              </p>
+            </TextDiv>
           </PhaseTitle>
         </PhaseTitleContainer>
       </Content>
@@ -73,7 +90,9 @@ export const LogoPage = ({ onMenuClick }) => {
         <Content>
           <PhaseTitleContainer>
             <PhaseSubtitle>
-              <TextDiv>Particle Droplets and Splatter</TextDiv>
+              <TextDiv>
+                <p>Particle Droplets and Splatter</p>
+              </TextDiv>
             </PhaseSubtitle>
             <PhaseSubtitle>
               <TextDiv>Interactive Cellular Automata Drawing Field</TextDiv>
@@ -89,7 +108,9 @@ export const LogoPage = ({ onMenuClick }) => {
           </SectionTitle>
           <ColumnTwo>
             <TextDiv>
-              <p>Particle Droplets and Splatter</p>
+              <p className="title-2">
+                Particle Droplets and <b>Splatter</b>
+              </p>
               <p>
                 At the commencement, particle droplets cascade from above the
                 canvas, gracefully landing around the central point where the
@@ -127,7 +148,9 @@ export const LogoPage = ({ onMenuClick }) => {
           </SectionTitle>
           <ColumnTwo>
             <TextDiv>
-              <p>Interactive Cellular Automata Drawing Field</p>
+              <p className="title-2">
+                <b>Interactive Cellular</b> Automata Drawing Field
+              </p>
               <p>
                 The cellular automata system isn't confined to a passive role;
                 it also embraces interactivity. Just as the particles leave a
@@ -165,7 +188,9 @@ export const LogoPage = ({ onMenuClick }) => {
           </SectionTitle>
           <ColumnTwo>
             <TextDiv>
-              <p>Interactive Perimeter Flow Field</p>
+              <p className="title-2">
+                <b>Interactive</b> Perimeter Flow Field
+              </p>
               <p>
                 The evolution continues into the final phase, introducing a
                 sequence of magnetic particles that sweep around the sun's
@@ -185,7 +210,7 @@ export const LogoPage = ({ onMenuClick }) => {
                 This meticulously crafted logo concept for Monet Media
                 encapsulates a symphony of artistic elements and interactivity,
                 combining particle dynamics, cellular automata, and magnetic
-                field representations to craft an immersive visual journey
+                field representations to craft an immersive visual journey.
               </p>
             </TextDiv>
             <TextDiv>
