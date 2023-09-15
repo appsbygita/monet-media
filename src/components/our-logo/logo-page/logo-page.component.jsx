@@ -17,6 +17,8 @@ import {
   FooterSection,
   Footer,
   FooterMenu,
+  PhaseImg,
+  ConceptImg,
 } from "./logo-page.styles";
 import { SocialLinks } from "../../home/social-links/social-links.component";
 import { Logo } from "../../home/logo/logo.component";
@@ -25,6 +27,10 @@ import { LogoCanvas } from "../../logo-canvas/logo-canvas.component";
 import Hamburger from "../../../assets/icons/hamburger.svg";
 import PhaseOne1 from "../../../assets/logo_page/phase-one-1.png";
 import PhaseOne2 from "../../../assets/logo_page/phase-one-2.png";
+import PhaseTwo1 from "../../../assets/logo_page/phase-two-1.png";
+import PhaseTwo2 from "../../../assets/logo_page/phase-two-2.png";
+import PhaseThree from "../../../assets/logo_page/phase-three.png";
+import Concept from "../../../assets/logo_page/concept.png";
 
 export const LogoPage = ({ onMenuClick, onPrivacyClick, onTermsClick }) => {
   return (
@@ -43,7 +49,7 @@ export const LogoPage = ({ onMenuClick, onPrivacyClick, onTermsClick }) => {
       <LogoContainer>
         <LogoCanvas />
       </LogoContainer>
-      <Content>
+      <Content padding="30px 0">
         <SectionTitle>
           <b>The Concept</b>
         </SectionTitle>
@@ -59,31 +65,31 @@ export const LogoPage = ({ onMenuClick, onPrivacyClick, onTermsClick }) => {
               captivating visual experience.
             </p>
           </TextDiv>
-          <TextDiv></TextDiv>
+          <ConceptImg src={Concept} alt="Artwork schematic" />
         </ColumnTwo>
       </Content>
       <Content>
         <PhaseTitleContainer>
           <PhaseTitle>
-            <TextDiv>
+            <TextDiv margin="0">
               <p className="pretitle">Phase</p>
-              <p className="title">
+              <p className="title-2">
                 <b>One</b>
               </p>
             </TextDiv>
           </PhaseTitle>
           <PhaseTitle>
-            <TextDiv>
+            <TextDiv margin="0">
               <p className="pretitle">Phase</p>
-              <p className="title">
+              <p className="title-2">
                 <b>Two</b>
               </p>
             </TextDiv>
           </PhaseTitle>
           <PhaseTitle>
-            <TextDiv>
+            <TextDiv margin="0">
               <p className="pretitle">Phase</p>
-              <p className="title">
+              <p className="title-2">
                 <b>Three</b>
               </p>
             </TextDiv>
@@ -99,10 +105,14 @@ export const LogoPage = ({ onMenuClick, onPrivacyClick, onTermsClick }) => {
               </TextDiv>
             </PhaseSubtitle>
             <PhaseSubtitle>
-              <TextDiv>Interactive Cellular Automata Drawing Field</TextDiv>
+              <TextDiv>
+                <p>Interactive Cellular Automata Drawing Field</p>
+              </TextDiv>
             </PhaseSubtitle>
             <PhaseSubtitle>
-              <TextDiv>Interactive Perimeter Flow Field</TextDiv>
+              <TextDiv>
+                <p>Interactive Perimeter Flow Field</p>
+              </TextDiv>
             </PhaseSubtitle>
           </PhaseTitleContainer>
         </Content>
@@ -111,7 +121,7 @@ export const LogoPage = ({ onMenuClick, onPrivacyClick, onTermsClick }) => {
             <b>Phase</b> One
           </SectionTitle>
           <ColumnTwo>
-            <TextDiv>
+            <TextDiv width="50%">
               <p className="title-2">
                 Particle Droplets and <b>Splatter</b>
               </p>
@@ -123,12 +133,12 @@ export const LogoPage = ({ onMenuClick, onPrivacyClick, onTermsClick }) => {
                 coloured paint splashes.
               </p>
             </TextDiv>
-            <TextDiv>
+            <PhaseImg>
               <img src={PhaseOne1} alt="Particle droplets" />
-            </TextDiv>
+            </PhaseImg>
           </ColumnTwo>
           <ColumnTwo direction="row-reverse">
-            <TextDiv>
+            <TextDiv width="50%">
               <p>
                 However, these splashes serve a unique purpose. Upon impact, the
                 calculated splashes enter a cellular automata system, triggering
@@ -141,9 +151,9 @@ export const LogoPage = ({ onMenuClick, onPrivacyClick, onTermsClick }) => {
                 processing alongside other artistic elements.
               </p>
             </TextDiv>
-            <TextDiv>
+            <PhaseImg>
               <img src={PhaseOne2} alt="Initial splatter" />
-            </TextDiv>
+            </PhaseImg>
           </ColumnTwo>
         </Content>
         <Content id="phase-2">
@@ -151,7 +161,7 @@ export const LogoPage = ({ onMenuClick, onPrivacyClick, onTermsClick }) => {
             <b>Phase</b> Two
           </SectionTitle>
           <ColumnTwo>
-            <TextDiv>
+            <TextDiv width="50%">
               <p className="title-2">
                 <b>Interactive Cellular</b> Automata Drawing Field
               </p>
@@ -164,12 +174,12 @@ export const LogoPage = ({ onMenuClick, onPrivacyClick, onTermsClick }) => {
                 directional force at each point within the sun's structure.
               </p>
             </TextDiv>
-            <TextDiv>
-              <img src={PhaseOne1} alt="Particle droplets" />
-            </TextDiv>
+            <PhaseImg>
+              <img src={PhaseTwo1} alt="Particle droplets" />
+            </PhaseImg>
           </ColumnTwo>
           <ColumnTwo direction="row-reverse">
-            <TextDiv>
+            <TextDiv width="50%">
               <p>
                 These values then inform a "field effect" colour pattern,
                 harnessing the magnetic forces associated with that particular
@@ -181,9 +191,9 @@ export const LogoPage = ({ onMenuClick, onPrivacyClick, onTermsClick }) => {
                 unveiling the field's curves and twists.
               </p>
             </TextDiv>
-            <TextDiv>
-              <img src={PhaseOne2} alt="Initial splatter" />
-            </TextDiv>
+            <PhaseImg>
+              <img src={PhaseTwo2} alt="Initial splatter" />
+            </PhaseImg>
           </ColumnTwo>
         </Content>
         <Content id="phase-3">
@@ -191,7 +201,7 @@ export const LogoPage = ({ onMenuClick, onPrivacyClick, onTermsClick }) => {
             <b>Phase</b> Three
           </SectionTitle>
           <ColumnTwo>
-            <TextDiv>
+            <TextDiv width="50%">
               <p className="title-2">
                 <b>Interactive</b> Perimeter Flow Field
               </p>
@@ -217,9 +227,9 @@ export const LogoPage = ({ onMenuClick, onPrivacyClick, onTermsClick }) => {
                 field representations to craft an immersive visual journey.
               </p>
             </TextDiv>
-            <TextDiv>
-              <img src={PhaseOne1} alt="Particle droplets" />
-            </TextDiv>
+            <PhaseImg className="phase-three">
+              <img src={PhaseThree} alt="Particle droplets" />
+            </PhaseImg>
           </ColumnTwo>
         </Content>
       </PhaseSection>

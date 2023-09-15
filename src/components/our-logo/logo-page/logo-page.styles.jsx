@@ -12,14 +12,50 @@ export const FooterSection = styled.div`
 `;
 
 export const Content = styled.div`
-  width: 80%;
+  width: 70%;
   margin: 0 auto;
+  padding: ${(props) => (props.padding ? props.padding : "0")};
+`;
+
+export const PhaseImg = styled.div`
+  border-radius: 40px;
+  background-color: #000;
+  width: 450px;
+  height: 300px;
+  overflow: clip;
+
+  display: flex;
+  justify-content: center;
+
+  & img {
+    width: auto;
+    height: 280px;
+  }
+
+  &.phase-three {
+    width: 450px;
+    height: 600px;
+    align-items: flex-end;
+
+    & img {
+      width: 400px;
+      height: auto;
+      padding-bottom: 20px;
+    }
+  }
+`;
+
+export const ConceptImg = styled.img`
+  width: 640px;
+  height: 600px;
 `;
 
 export const ColumnTwo = styled.div`
   display: flex;
+  width: 100%;
   flex-direction: ${(props) => (props.direction ? props.direction : "row")};
   align-items: center;
+  justify-content: space-between;
 
   @media screen and (max-width: 800px) {
     flex-direction: column;
@@ -27,13 +63,13 @@ export const ColumnTwo = styled.div`
 `;
 
 export const TextDiv = styled.div`
-  width: 100%;
+  width: ${(props) => (props.width ? props.width : "100%")};
   color: #999999;
   font-family: "Inter", sans-serif;
-  font-size: 18px;
+  font-size: 16px;
 
   & p {
-    margin: 0;
+    margin: ${(props) => (props.margin ? props.margin : "20px 0")};
   }
 
   & p.title {
@@ -71,7 +107,7 @@ export const PhaseTitleContainer = styled.div`
 `;
 
 export const PhaseTitle = styled.div`
-  width: 280px;
+  width: 230px;
   padding: 10px 40px;
   background-color: #2b2b2b;
   text-align: center;
@@ -80,7 +116,7 @@ export const PhaseTitle = styled.div`
 `;
 
 export const PhaseSubtitle = styled.div`
-  width: 280px;
+  width: 230px;
   padding: 10px 40px;
   background-color: #161616;
   text-align: center;
