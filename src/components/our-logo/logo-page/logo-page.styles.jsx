@@ -11,10 +11,31 @@ export const FooterSection = styled.div`
   background: #212121;
 `;
 
+export const DescriptionSection = styled.div`
+  background: #151515;
+`;
+
 export const Content = styled.div`
-  width: 70%;
+  width: ${(props) => (props.width ? props.width : "70%")};
   margin: 0 auto;
   padding: ${(props) => (props.padding ? props.padding : "0")};
+`;
+
+export const Carousel = styled.div`
+  overflow: hidden;
+  width: 1000px;
+  height: 900px;
+  margin: 0 auto;
+
+  & .carousel-content {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+
+    ${Content} {
+      width: 1400px;
+    }
+  }
 `;
 
 export const PhaseImg = styled.div`
@@ -47,14 +68,14 @@ export const PhaseImg = styled.div`
 
 export const ConceptImg = styled.img`
   width: 640px;
-  height: 600px;
+  height: auto;
 `;
 
 export const ColumnTwo = styled.div`
   display: flex;
   width: 100%;
   flex-direction: ${(props) => (props.direction ? props.direction : "row")};
-  align-items: center;
+  align-items: ${(props) => (props.align ? props.align : "center")};
   justify-content: space-between;
 
   @media screen and (max-width: 800px) {
@@ -92,6 +113,11 @@ export const TextDiv = styled.div`
     & b {
       color: #d2f950;
     }
+
+    &.white {
+      color: #fff;
+      font-size: 36px;
+    }
   }
 
   & p.pretitle {
@@ -104,6 +130,10 @@ export const TextDiv = styled.div`
 export const PhaseTitleContainer = styled.div`
   display: flex;
   justify-content: space-between;
+
+  & a {
+    text-decoration: none;
+  }
 `;
 
 export const PhaseTitle = styled.div`
@@ -113,6 +143,10 @@ export const PhaseTitle = styled.div`
   text-align: center;
   border-top-left-radius: 20px 20px;
   border-top-right-radius: 20px 20px;
+
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
 export const PhaseSubtitle = styled.div`
@@ -130,6 +164,7 @@ export const PhaseSection = styled.div`
 `;
 
 export const SectionTitle = styled.div`
+  width: ${(props) => (props.width ? props.width : "100%")};
   z-index: 999;
   position: relative;
   padding-top: 40px;
