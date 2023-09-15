@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import {
   DisplayContainer,
   LeftCol,
@@ -43,6 +45,11 @@ export const MenuPopup = ({ onMenuClick, className }) => {
             <a href="#our-ecosystem" onClick={onMenuClick}>
               Our Ecosystem
             </a>
+          </menuLink>
+          <menuLink>
+            <Link to="/our-logo" reloadDocument>
+              About Artwork
+            </Link>
           </menuLink>
         </RightCol>
       </MenuContent>
