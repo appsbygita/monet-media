@@ -21,10 +21,12 @@ import {
   ConceptImg,
   DescriptionSection,
   Carousel,
+  CTASection,
 } from "./logo-page.styles";
 import { SocialLinks } from "../../home/social-links/social-links.component";
 import { Logo } from "../../home/logo/logo.component";
 import { LogoCanvas } from "../../logo-canvas/logo-canvas.component";
+import { CTAButton } from "../../home/cta-button/cta-button.component";
 
 import Hamburger from "../../../assets/icons/hamburger.svg";
 import PhaseOne1 from "../../../assets/logo_page/phase-one-1.png";
@@ -33,8 +35,14 @@ import PhaseTwo1 from "../../../assets/logo_page/phase-two-1.png";
 import PhaseTwo2 from "../../../assets/logo_page/phase-two-2.png";
 import PhaseThree from "../../../assets/logo_page/phase-three.png";
 import Concept from "../../../assets/logo_page/concept.png";
+import CTABackground from "../../../assets/gallery_mock/gallery-1.webp";
 
-export const LogoPage = ({ onMenuClick, onPrivacyClick, onTermsClick }) => {
+export const LogoPage = ({
+  onMenuClick,
+  onButtonClick,
+  onPrivacyClick,
+  onTermsClick,
+}) => {
   return (
     <PageContainer>
       <Navbar>
@@ -292,6 +300,19 @@ export const LogoPage = ({ onMenuClick, onPrivacyClick, onTermsClick }) => {
           </ColumnTwo>
         </Content>
       </DescriptionSection>
+      <CTASection image={CTABackground}>
+        <Content padding="20px 0">
+          <TextDiv>
+            <p className="title-2 white">
+              Are you <b>a Creator?</b>
+            </p>
+            <p>Submit your digital artwork to get featured</p>
+            <CTAButton width="360px" height="70px" onClick={onButtonClick}>
+              Express Your Interest
+            </CTAButton>
+          </TextDiv>
+        </Content>
+      </CTASection>
       <FooterSection>
         <Content>
           <Footer>

@@ -15,6 +15,15 @@ export const DescriptionSection = styled.div`
   background: #151515;
 `;
 
+export const CTASection = styled.div`
+  background-color: #000;
+  background: url(${(props) => props.image});
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: 50%;
+  min-height: 300px;
+`;
+
 export const Content = styled.div`
   width: ${(props) => (props.width ? props.width : "70%")};
   margin: 0 auto;

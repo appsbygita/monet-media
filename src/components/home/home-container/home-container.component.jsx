@@ -27,7 +27,6 @@ import {
   HeroDiv,
   Navbar,
   LogoRowContainer,
-  ContributorSectionSpace,
 } from "./home-container.styles";
 import { TitleText, ContentText, Paragraph } from "../../text/text.styles";
 import { Spacer } from "../../spacer/spacer.styles";
