@@ -327,6 +327,7 @@ export const LogoPage = ({
       <div style={{ padding: "38.27% 0 0 0", position: "relative" }}>
         <iframe
           src="//player.vimeo.com/video/667769233?h=f178108bfd&autoplay=0&title=0&portrait=0&byline=0&badge=0"
+          title="Charles Machin Highlight Reel"
           style={{
             position: "absolute",
             top: "0",

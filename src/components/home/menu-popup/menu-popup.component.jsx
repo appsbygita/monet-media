@@ -48,7 +48,7 @@ export const MenuPopup = ({ onMenuClick, className }) => {
           </menuLink>
           <menuLink>
             <Link to="/our-logo" reloadDocument>
-              About Artwork
+              Our Artwork
             </Link>
           </menuLink>
         </RightCol>
