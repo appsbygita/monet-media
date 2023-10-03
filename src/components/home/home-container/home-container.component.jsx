@@ -27,6 +27,7 @@ import {
   HeroDiv,
   Navbar,
   LogoRowContainer,
+  ContentHero,
 } from "./home-container.styles";
 import { TitleText, ContentText, Paragraph } from "../../text/text.styles";
 import { Spacer } from "../../spacer/spacer.styles";
@@ -70,7 +71,7 @@ export const HomeContainer = ({
         <img onClick={onMenuClick} src={Hamburger} alt="Menu button" />
       </Navbar>
       <HeroSection>
-        <Content padding="0">
+        <ContentHero padding="0">
           <Header>
             <MenuButton onClick={onMenuClick}>Menu</MenuButton>
           </Header>
@@ -93,7 +94,7 @@ export const HomeContainer = ({
             </Button>
           </HeroDiv>
           <VerticalLine />
-        </Content>
+        </ContentHero>
       </HeroSection>
 
       <DarkSection id="our-approach">

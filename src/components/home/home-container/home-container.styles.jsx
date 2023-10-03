@@ -92,10 +92,27 @@ export const ContributorImage = styled.div`
 export const Content = styled.div`
   display: flex;
   flex-direction: column;
-  width: 80%;
+  width: ${(props) => (props.width ? props.width : "80%")};
   height: 100%;
   margin: 0 auto;
   padding: ${(props) => (props.padding ? props.padding : "40px")} 0;
+
+  @media screen and (max-width: 800px) {
+    width: 80%;
+  }
+`;
+
+export const ContentHero = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+  padding: ${(props) => (props.padding ? props.padding : "40px")} 0;
+
+  @media screen and (max-width: 1400px) {
+    width: 800px;
+  }
 
   @media screen and (max-width: 800px) {
     width: 80%;
@@ -265,8 +282,10 @@ export const LogoRowContainer = styled.div`
 export const HomeTitle = styled.div`
   text-align: center;
   line-height: 4.5rem;
+  padding-top: 50px;
 
   @media screen and (max-width: 800px) {
+    padding-top: 100px;
     line-height: 7vw;
   }
 `;

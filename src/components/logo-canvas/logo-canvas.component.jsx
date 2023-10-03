@@ -5,7 +5,7 @@ export const LogoCanvas = ({ width }) => {
     const cnv = document.getElementById("tc");
     const script = document.createElement("script");
     script.type = "text/javascript";
-    script.src = process.env.PUBLIC_URL + "/script/logo-script-04-remake.js";
+    script.src = process.env.PUBLIC_URL + "/script/logo-04-remake.js";
 
     cnv.appendChild(script);
     console.log(cnv);

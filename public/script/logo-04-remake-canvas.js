@@ -757,8 +757,9 @@ function I() {
     },
     X = (e, t) => {
       var r = window,
-        a = r.innerWidth,
-        l = r.innerHeight,
+        parentRect = cnv.getBoundingClientRect(),
+        a = parentRect.width, //r.innerWidth,
+        l = parentRect.width, //r.innerHeight,
         C = a != _W || l != _H,
         n = min(a, l) * e,
         o = n / PX,

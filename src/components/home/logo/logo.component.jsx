@@ -1,15 +1,24 @@
 import { useState, useRef, useEffect } from "react";
+import { Link } from "react-router-dom";
 
-import M from "../../../assets/monet_logo/m_vector.svg";
-import Net from "../../../assets/monet_logo/net_vector.svg";
-import Media from "../../../assets/monet_logo/media_vector.svg";
+// import M from "../../../assets/monet_logo/m_vector.svg";
+// import Net from "../../../assets/monet_logo/net_vector.svg";
+// import Media from "../../../assets/monet_logo/media_vector.svg";
 import Sun from "../../../assets/monet_logo/sun_static.png";
 import { LogoCanvas } from "../../logo-canvas/logo-canvas.component";
 
-import { Link } from "react-router-dom";
-import { LogoContainer, LogoSpace } from "./logo.styles";
+import {
+  LogoContainer,
+  LogoSpace,
+  LogoSpaceOne,
+  LogoSpaceTwo,
+  CanvasContainer,
+  MImg,
+  NetImg,
+  MediaImg,
+} from "./logo.styles";
 
-export const Logo = ({ isStatic, isHero, withLink }) => {
+export const Logo = ({ isStatic, isHero }) => {
   const [width, setWidth] = useState(0);
   // const [scriptUrl, setScriptUrl] = useState("");
   const ref = useRef(null);
@@ -18,21 +27,30 @@ export const Logo = ({ isStatic, isHero, withLink }) => {
     setWidth(ref.current.clientWidth * 0.1);
   }, [ref]);
 
-  return (
+  return isStatic ? (
     <LogoContainer ref={ref}>
-      <img className={isHero} src={M} alt="logo part 1" width="11%" />
-      {isStatic ? (
-        <img src={Sun} alt="logo part 2" width="15%" />
-      ) : withLink ? (
+      <MImg className={isHero} width="11%" />
+      <img src={Sun} alt="logo part 2" width="15%" />
+      <NetImg className={isHero} width="24%" />
+      <LogoSpace className={isHero} width="10%" />
+      <MediaImg className={isHero} width="40%" />
+    </LogoContainer>
+  ) : (
+    <LogoContainer ref={ref}>
+      <MImg className={isHero} />
+      {/* <LogoCanvas width={isHero ? width * 3 : width} /> */}
+      {/* <CanvasContainer /> */}
+      <CanvasContainer>
+        <LogoCanvas width="110px" />
+      </CanvasContainer>
+      <LogoSpaceOne className={isHero}>
         <Link to="/our-logo" reloadDocument>
-          <LogoCanvas width={isHero ? width * 3 : width} />
+          <span id="linkSpan"></span>
         </Link>
-      ) : (
-        <LogoCanvas width={isHero ? width * 3 : width} />
-      )}
-      <img className={isHero} src={Net} alt="logo part 3" width="24%" />
-      <LogoSpace className={isHero} />
-      <img className={isHero} src={Media} alt="logo part 4" width="40%" />
+      </LogoSpaceOne>
+      <NetImg className={isHero} />
+      <LogoSpaceTwo className={isHero} />
+      <MediaImg className={isHero} />
     </LogoContainer>
   );
 };
