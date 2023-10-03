@@ -36,6 +36,10 @@ import PhaseTwo2 from "../../../assets/logo_page/phase-two-2.png";
 import PhaseThree from "../../../assets/logo_page/phase-three.png";
 import Concept from "../../../assets/logo_page/concept.png";
 import CTABackground from "../../../assets/gallery_mock/gallery-1.webp";
+import Charles from "../../../assets/image/charles.webp";
+import Chaos1 from "../../../assets/image/chaos-1.webp";
+import Chaos2 from "../../../assets/image/chaos-2.webp";
+import Chaos3 from "../../../assets/image/chaos-3.webp";
 
 export const LogoPage = ({
   onMenuClick,
@@ -263,7 +267,7 @@ export const LogoPage = ({
         </Carousel>
         <Content padding="25px 0" />
       </PhaseSection>
-      <DescriptionSection>
+      <DescriptionSection background="#151515">
         <Content padding="60px 0">
           <ColumnTwo align="flex-start">
             <TextDiv width="48%">
@@ -298,6 +302,135 @@ export const LogoPage = ({
               </p>
             </TextDiv>
           </ColumnTwo>
+        </Content>
+      </DescriptionSection>
+      <DescriptionSection>
+        <Content padding="60px 0">
+          <ColumnTwo align="flex-start">
+            <TextDiv width="48%">
+              <p className="pretitle">The Artist</p>
+              <p className="title-2">
+                Charles <b>Machin</b>
+              </p>
+              <p>
+                Charles Machin is a visionary artist with a profound fascination
+                for the mysteries of reality and the intricate interplay of
+                physical forces that shape our universe. His journey through the
+                realms of art and technology has led him to create generative
+                art pieces that transcend boundaries and ignite the imagination.
+              </p>
+            </TextDiv>
+            <img width="48%" src={Charles} alt="Charles Machin" />
+          </ColumnTwo>
+        </Content>
+      </DescriptionSection>
+      <DescriptionSection>
+        <Content padding="60px 0">
+          <ColumnTwo align="flex-start">
+            <TextDiv width="48%">
+              <p className="title-2 white">Artistic History</p>
+              <p>
+                One pivotal moment in his artistic journey occurred deep within
+                the tropical Peruvian rainforest. There, he experienced the
+                profound effects of plant medicine, reigniting his inner light
+                and inspiring him to create what he truly loves. That eureka
+                moment was a transformative experience that set the stage for
+                his unique artistic style. These days, he focuses his artistic
+                endeavors on code-based and on-chain digital art on the Cardano
+                blockchain. His creations are designed to function independently
+                without external dependencies, presenting an enjoyable yet
+                challenging task of crafting self-contained units for each
+                piece.
+              </p>
+              <p>
+                Within 22 years dedicated to the visual effects and gaming
+                industry, Charles has worn many hats from visual effects artist
+                to technical artist and lead coder for various games. His work
+                spans VR medical training simulations for healthcare
+                professionals, showcasing his proficiency in programming
+                languages such as C#, JavaScript, Python, and LUA. Although he
+                has worked with tools like Maya, 3DS Max, Light Wave, and
+                Houdini for 3D art in the past, his focus has now shifted to the
+                world of generative art.
+              </p>
+            </TextDiv>
+            <TextDiv width="48%">
+              <p className="title-2 white">Artistic Style</p>
+              <p>
+                Charles has been actively creating art in the Web3 space for the
+                past three years, primarily focusing on generative art with an
+                abstract style. His works draws inspiration from nature,
+                personal experiences, and emotions.
+              </p>
+              <p>
+                Through his art, he explores concepts related to nature,
+                ecology, physics and general sciences, and spirituality. His art
+                style continues to evolve as he embarks on personal explorations
+                and research. Through his art, Charles aims to convey feelings
+                of hope and optimism, reflection and contemplation. He invites
+                his audience to actively participate, engage in deep
+                introspection, forge emotional connections, and indulge in
+                intellectual reflection and questioning. He creates his art
+                primarily for art collectors and enthusiasts, tech geeks and
+                first-adopters, and nature lovers too. He actively engages with
+                the Web3 community on social media thereby fostering new
+                connections and collaborations.
+              </p>
+              <p>
+                Currently, he is looking to develop his artistic style and
+                methods within the constraints of on-chain art and building an
+                audience interested in his work on the short term. Looking ahead
+                into the future, he envisions creating tailored sensory gallery
+                experiences by combining audio, visual, and reactivity
+                seamlessly.
+              </p>
+            </TextDiv>
+          </ColumnTwo>
+        </Content>
+        <TextDiv fontSize="20px" padding="0 0 30px 0">
+          <p className="title-2 white" align="center">
+            Some of Charles' <b>ETERNAL CHAOS Collections</b>
+          </p>
+        </TextDiv>
+        <ColumnTwo>
+          <img
+            src={Chaos1}
+            alt="An example of Charles' previous work"
+            width="32%"
+          />
+          <img
+            src={Chaos2}
+            alt="An example of Charles' previous work"
+            width="32%"
+          />
+          <img
+            src={Chaos3}
+            alt="An example of Charles' previous work"
+            width="32%"
+          />
+        </ColumnTwo>
+        <Content padding="40px 0 60px 0">
+          <TextDiv>
+            <p className="title-2" align="center">
+              Collaborating with <b>Monet Media</b>
+            </p>
+            <p>
+              Charles' artistic journey aligns seamlessly with Monet Media's
+              mission to revolutionize marketing campaigns through AI and human
+              creativity. Monet Media leverages blockchain for data security and
+              privacy, creating a vibrant creative community where everyone has
+              a stake. His contributions to this ecosystem is recognized and
+              rewarded, fostering a culture of innovation and inclusivity.
+            </p>
+            <p>
+              Through Monet Media, he will be able to find and reach his
+              audience, showcase his work in galleries and installations, and
+              explore various campaigns and promotions for his art in the Web3
+              space. With that being said, both parties would be able to
+              increase sales, engagement, visibility, recognition,
+              collaboration, and community building.
+            </p>
+          </TextDiv>
         </Content>
       </DescriptionSection>
       <CTASection image={CTABackground}>

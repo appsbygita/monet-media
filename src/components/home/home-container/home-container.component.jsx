@@ -75,7 +75,11 @@ export const HomeContainer = ({
             <MenuButton onClick={onMenuClick}>Menu</MenuButton>
           </Header>
           <HeroDiv>
-            {screenSize.width <= 800 ? <Logo isHero="hero" /> : <Logo />}
+            {screenSize.width <= 800 ? (
+              <Logo isHero="hero" withLink />
+            ) : (
+              <Logo />
+            )}
             <HomeTitle>
               <TitleText>
                 <span id="one">Where Creativity</span>{" "}

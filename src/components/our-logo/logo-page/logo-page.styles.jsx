@@ -12,7 +12,7 @@ export const FooterSection = styled.div`
 `;
 
 export const DescriptionSection = styled.div`
-  background: #151515;
+  background: ${(props) => (props.background ? props.background : "#212121")};
 `;
 
 export const CTASection = styled.div`
@@ -97,6 +97,7 @@ export const TextDiv = styled.div`
   color: #999999;
   font-family: "Inter", sans-serif;
   font-size: 16px;
+  padding: ${(props) => (props.padding ? props.padding : "0")};
 
   & p {
     margin: ${(props) => (props.margin ? props.margin : "20px 0")};
@@ -117,15 +118,17 @@ export const TextDiv = styled.div`
     color: #aaa;
     font-family: "Unbounded", sans-serif;
     font-weight: 400;
-    font-size: 48px;
+    font-size: ${(props) => (props.fontSize ? props.fontSize : "48px")};
 
     & b {
       color: #d2f950;
+      font-size: ${(props) => (props.fontSize ? props.fontSize : "48px")};
     }
 
     &.white {
       color: #fff;
       font-size: 36px;
+      font-size: ${(props) => (props.fontSize ? props.fontSize : "48px")};
     }
   }
 

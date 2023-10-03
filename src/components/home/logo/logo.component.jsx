@@ -6,9 +6,10 @@ import Media from "../../../assets/monet_logo/media_vector.svg";
 import Sun from "../../../assets/monet_logo/sun_static.png";
 import { LogoCanvas } from "../../logo-canvas/logo-canvas.component";
 
+import { Link } from "react-router-dom";
 import { LogoContainer, LogoSpace } from "./logo.styles";
 
-export const Logo = ({ isStatic, isHero }) => {
+export const Logo = ({ isStatic, isHero, withLink }) => {
   const [width, setWidth] = useState(0);
   // const [scriptUrl, setScriptUrl] = useState("");
   const ref = useRef(null);
@@ -22,6 +23,10 @@ export const Logo = ({ isStatic, isHero }) => {
       <img className={isHero} src={M} alt="logo part 1" width="11%" />
       {isStatic ? (
         <img src={Sun} alt="logo part 2" width="15%" />
+      ) : withLink ? (
+        <Link to="/our-logo" reloadDocument>
+          <LogoCanvas width={isHero ? width * 3 : width} />
+        </Link>
       ) : (
         <LogoCanvas width={isHero ? width * 3 : width} />
       )}
