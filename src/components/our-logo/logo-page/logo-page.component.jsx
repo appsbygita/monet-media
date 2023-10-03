@@ -324,6 +324,22 @@ export const LogoPage = ({
           </ColumnTwo>
         </Content>
       </DescriptionSection>
+      <div style={{ padding: "38.27% 0 0 0", position: "relative" }}>
+        <iframe
+          src="//player.vimeo.com/video/667769233?h=f178108bfd&autoplay=0&title=0&portrait=0&byline=0&badge=0"
+          style={{
+            position: "absolute",
+            top: "0",
+            left: "0",
+            width: "100%",
+            height: "100%",
+          }}
+          frameborder="0"
+          allow="autoplay; fullscreen; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+      <script src="https://player.vimeo.com/api/player.js"></script>
       <DescriptionSection>
         <Content padding="60px 0">
           <ColumnTwo align="flex-start">
