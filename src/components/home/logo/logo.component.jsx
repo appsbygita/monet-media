@@ -25,10 +25,12 @@ export const Logo = ({ isStatic, isHero }) => {
   }, []);
 
   const getLogoWidth = () => {
-    if (dpr > 1) {
+    if (dpr > 1.5) {
       return "110px";
-    } else {
+    } else if (dpr < 1.5) {
       return "220px";
+    } else {
+      return "146px";
     }
   };
 
