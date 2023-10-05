@@ -34,6 +34,9 @@ export const Logo = ({ isStatic, isHero }) => {
     }
   };
 
+  console.log("dpr", dpr);
+  console.log("width", getLogoWidth());
+
   return isStatic ? (
     <LogoContainer>
       {/* <MImg className={isHero} width="11%" />
