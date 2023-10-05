@@ -1,7 +1,6 @@
 import { styled } from "styled-components";
 import HeroBg from "../../../assets/hero-bg.webp";
 import ContributorBg from "../../../assets/image/back-3.jpeg";
-import { Logo } from "../logo/logo.component";
 
 export const Container = styled.div`
   width: 100vw;

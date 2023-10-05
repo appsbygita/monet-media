@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import {
   PageContainer,
@@ -47,6 +48,31 @@ export const LogoPage = ({
   onPrivacyClick,
   onTermsClick,
 }) => {
+  const [dpr, setDpr] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
+  // const [scriptUrl, setScriptUrl] = useState("");
+  // const ref = useRef(null);
+
+  // useEffect(() => {
+  //   setWidth(ref.current.clientWidth * 0.1);
+  // }, [ref]);
+  useEffect(() => {
+    setDpr(window.devicePixelRatio);
+    if (window.screen.width < 770) {
+      setIsMobile(true);
+    }
+  }, []);
+
+  const getLogoWidth = () => {
+    if (dpr > 1.5) {
+      return "180px";
+    } else if (dpr < 1.5) {
+      return "360px";
+    } else {
+      return "240px";
+    }
+  };
+
   return (
     <PageContainer>
       <Navbar>
@@ -61,7 +87,7 @@ export const LogoPage = ({
         </Link>
       </Header>
       <LogoContainer>
-        <LogoCanvas />
+        <LogoCanvas width={getLogoWidth()} />
       </LogoContainer>
       <Content padding="30px 0">
         <SectionTitle>
@@ -406,24 +432,29 @@ export const LogoPage = ({
         </Content>
         <TextDiv fontSize="20px" padding="0 0 30px 0">
           <p className="title-2 white" align="center">
-            Some of Charles' <b>ETERNAL CHAOS Collections</b>
+            Some of Charles'{" "}
+            <span id="mobileLine">
+              <b>ETERNAL CHAOS Collections</b>
+            </span>
           </p>
         </TextDiv>
         <ColumnTwo>
           <img
             src={Chaos1}
             alt="An example of Charles' previous work"
-            width="32%"
+            width={isMobile ? "70%" : "32%"}
           />
+          <div class="imgSpace" />
           <img
             src={Chaos2}
             alt="An example of Charles' previous work"
-            width="32%"
+            width={isMobile ? "70%" : "32%"}
           />
+          <div class="imgSpace" />
           <img
             src={Chaos3}
             alt="An example of Charles' previous work"
-            width="32%"
+            width={isMobile ? "70%" : "32%"}
           />
         </ColumnTwo>
         <Content padding="40px 0 60px 0">

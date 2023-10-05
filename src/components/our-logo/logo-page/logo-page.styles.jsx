@@ -89,6 +89,10 @@ export const ColumnTwo = styled.div`
 
   @media screen and (max-width: 800px) {
     flex-direction: column;
+
+    & div.imgSpace {
+      height: 24px;
+    }
   }
 `;
 
@@ -127,7 +131,6 @@ export const TextDiv = styled.div`
 
     &.white {
       color: #fff;
-      font-size: 36px;
       font-size: ${(props) => (props.fontSize ? props.fontSize : "48px")};
     }
   }
@@ -136,6 +139,25 @@ export const TextDiv = styled.div`
     font-family: "Unbounded", sans-serif;
     color: #aaa;
     font-size: 22px;
+  }
+
+  @media only screen and (max-width: 500px) {
+    & p.title,
+    p.title-2.white,
+    p.title-2 {
+      font-size: ${(props) => (props.fontSize ? props.fontSize : "34px")};
+
+      & span#mobileLine {
+        display: block;
+      }
+
+      & b {
+        font-size: ${(props) => (props.fontSize ? props.fontSize : "34px")};
+      }
+    }
+    & p.pretitle {
+      font-size: 18px;
+    }
   }
 `;
 
@@ -247,7 +269,6 @@ export const Footer = styled.div`
 
     ${FooterLogo} {
       width: 60%;
-      margin: 0 auto;
       padding-bottom: 40px;
     }
   }

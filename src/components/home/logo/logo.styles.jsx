@@ -69,9 +69,8 @@ export const LogoSpaceOne = styled.div`
   }
 
   @media screen and (max-width: 800px) {
-    .hero {
-      display: none;
-    }
+    left: 0;
+    position: relative;
   }
 `;
 

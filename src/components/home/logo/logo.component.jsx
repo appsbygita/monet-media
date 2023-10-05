@@ -50,7 +50,7 @@ export const Logo = ({ isStatic, isHero }) => {
       <CanvasContainer>
         <LogoCanvas width={getLogoWidth()} />
       </CanvasContainer>
-      <LogoSpaceOne className={isHero}>
+      <LogoSpaceOne>
         <Link to="/our-logo" reloadDocument>
           <span id="linkSpan"></span>
         </Link>
