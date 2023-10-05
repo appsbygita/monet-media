@@ -1,4 +1,4 @@
-// import { useState, useRef, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import { LogoCanvas } from "../../logo-canvas/logo-canvas.component";
@@ -13,12 +13,24 @@ import {
 
 export const Logo = ({ isStatic, isHero }) => {
   // const [width, setWidth] = useState(0);
+  const [dpr, setDpr] = useState(0);
   // const [scriptUrl, setScriptUrl] = useState("");
   // const ref = useRef(null);
 
   // useEffect(() => {
   //   setWidth(ref.current.clientWidth * 0.1);
   // }, [ref]);
+  useEffect(() => {
+    setDpr(window.devicePixelRatio);
+  }, []);
+
+  const getLogoWidth = () => {
+    if (dpr > 1) {
+      return "110px";
+    } else {
+      return "220px";
+    }
+  };
 
   return isStatic ? (
     <LogoContainer>
@@ -34,7 +46,7 @@ export const Logo = ({ isStatic, isHero }) => {
       <MonetImg className={isHero} />
       {/* <LogoCanvas width={isHero ? width * 3 : width} /> */}
       <CanvasContainer>
-        <LogoCanvas width="110px" />
+        <LogoCanvas width={getLogoWidth()} />
       </CanvasContainer>
       <LogoSpaceOne className={isHero}>
         <Link to="/our-logo" reloadDocument>
