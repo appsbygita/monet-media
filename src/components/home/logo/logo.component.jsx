@@ -51,7 +51,7 @@ export const Logo = ({ isStatic, isHero }) => {
       <MonetImg className={isHero} />
       {/* <LogoCanvas width={isHero ? width * 3 : width} /> */}
       <CanvasContainer>
-        <LogoCanvas width={getLogoWidth()} />
+        <LogoCanvas width="110px" />
       </CanvasContainer>
       <LogoSpaceOne>
         <Link to="/our-logo" reloadDocument>
