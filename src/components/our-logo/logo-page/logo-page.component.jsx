@@ -65,12 +65,22 @@ export const LogoPage = ({
   }, []);
 
   const getLogoWidth = () => {
-    if (dpr > 1.5) {
-      return "180px";
-    } else if (dpr < 1.5) {
-      return "360px";
+    if (isMobile) {
+      if (dpr > 1.5) {
+        return "180px";
+      } else if (dpr < 1.5) {
+        return "360px";
+      } else {
+        return "240px";
+      }
     } else {
-      return "240px";
+      if (dpr > 1.5) {
+        return "300px";
+      } else if (dpr < 1.5) {
+        return "600px";
+      } else {
+        return "450px";
+      }
     }
   };
 
@@ -86,7 +96,7 @@ export const LogoPage = ({
       </Navbar>
       <Header>
         <Link to="/" reloadDocument>
-          <MenuButton>Back</MenuButton>
+          <MenuButton>Home</MenuButton>
         </Link>
       </Header>
       <LogoContainer>
