@@ -34,8 +34,8 @@ export const Logo = ({ isStatic, isHero }) => {
     }
   };
 
-  console.log("dpr", dpr);
-  console.log("width", getLogoWidth());
+  // console.log("dpr", dpr);
+  // console.log("width", getLogoWidth());
 
   return isStatic ? (
     <LogoContainer>
@@ -51,7 +51,7 @@ export const Logo = ({ isStatic, isHero }) => {
       <MonetImg className={isHero} />
       {/* <LogoCanvas width={isHero ? width * 3 : width} /> */}
       <CanvasContainer>
-        <LogoCanvas width="200px" />
+        <LogoCanvas width={getLogoWidth()} />
       </CanvasContainer>
       <LogoSpaceOne>
         <Link to="/our-logo" reloadDocument>
