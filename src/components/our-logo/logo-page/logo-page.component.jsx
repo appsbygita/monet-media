@@ -30,7 +30,6 @@ import { Logo } from "../../home/logo/logo.component";
 import { LogoCanvas } from "../../logo-canvas/logo-canvas.component";
 import { CTAButton } from "../../home/cta-button/cta-button.component";
 
-import Hamburger from "../../../assets/icons/hamburger.svg";
 import PhaseOne1 from "../../../assets/logo_page/phase-one-1.png";
 import PhaseOne2 from "../../../assets/logo_page/phase-one-2.png";
 import PhaseTwo1 from "../../../assets/logo_page/phase-two-1.png";
@@ -43,12 +42,7 @@ import Chaos1 from "../../../assets/image/chaos-1.webp";
 import Chaos2 from "../../../assets/image/chaos-2.webp";
 import Chaos3 from "../../../assets/image/chaos-3.webp";
 
-export const LogoPage = ({
-  onMenuClick,
-  onButtonClick,
-  onPrivacyClick,
-  onTermsClick,
-}) => {
+export const LogoPage = ({ onButtonClick, onPrivacyClick, onTermsClick }) => {
   const [dpr, setDpr] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
   // const [scriptUrl, setScriptUrl] = useState("");
@@ -92,7 +86,6 @@ export const LogoPage = ({
             <Logo isStatic={true} />
           </Link>
         </FooterLogo>
-        <img onClick={onMenuClick} src={Hamburger} alt="Menu button" />
       </Navbar>
       <Header>
         <Link to="/" reloadDocument>
