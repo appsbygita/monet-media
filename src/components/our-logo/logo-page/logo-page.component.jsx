@@ -23,6 +23,7 @@ import {
   DescriptionSection,
   Carousel,
   CTASection,
+  ArtistImg,
 } from "./logo-page.styles";
 import { SocialLinks } from "../../home/social-links/social-links.component";
 import { Logo } from "../../home/logo/logo.component";
@@ -77,7 +78,9 @@ export const LogoPage = ({
     <PageContainer>
       <Navbar>
         <FooterLogo>
-          <Logo isStatic={true} />
+          <Link to="/" reloadDocument>
+            <Logo isStatic={true} />
+          </Link>
         </FooterLogo>
         <img onClick={onMenuClick} src={Hamburger} alt="Menu button" />
       </Navbar>
@@ -108,7 +111,7 @@ export const LogoPage = ({
           <ConceptImg src={Concept} alt="Artwork schematic" />
         </ColumnTwo>
       </Content>
-      <Content>
+      <Content className="nomobile">
         <PhaseTitleContainer>
           <a href="#phase-1">
             <PhaseTitle>
@@ -145,7 +148,7 @@ export const LogoPage = ({
         </PhaseTitleContainer>
       </Content>
       <PhaseSection>
-        <Content>
+        <Content className="nomobile">
           <PhaseTitleContainer>
             <PhaseSubtitle>
               <TextDiv>
@@ -207,7 +210,7 @@ export const LogoPage = ({
                 </PhaseImg>
               </ColumnTwo>
             </Content>
-            <Content padding="0 100px" />
+            <Content padding="0 100px" className="nomobile" />
             <Content id="phase-2">
               <SectionTitle width="1000px">
                 <b>Phase</b> Two
@@ -250,7 +253,7 @@ export const LogoPage = ({
                 </PhaseImg>
               </ColumnTwo>
             </Content>
-            <Content padding="0 100px" />
+            <Content padding="0 100px" className="nomobile" />
             <Content id="phase-3">
               <SectionTitle width="1000px">
                 <b>Phase</b> Three
@@ -346,7 +349,7 @@ export const LogoPage = ({
                 art pieces that transcend boundaries and ignite the imagination.
               </p>
             </TextDiv>
-            <img width="48%" src={Charles} alt="Charles Machin" />
+            <ArtistImg src={Charles} alt="Charles Machin" />
           </ColumnTwo>
         </Content>
       </DescriptionSection>

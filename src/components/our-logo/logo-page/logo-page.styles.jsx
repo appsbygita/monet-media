@@ -28,6 +28,12 @@ export const Content = styled.div`
   width: ${(props) => (props.width ? props.width : "70%")};
   margin: 0 auto;
   padding: ${(props) => (props.padding ? props.padding : "0")};
+
+  @media only screen and (max-width: 800px) {
+    &.nomobile {
+      display: none;
+    }
+  }
 `;
 
 export const Carousel = styled.div`
@@ -43,6 +49,21 @@ export const Carousel = styled.div`
 
     ${Content} {
       width: 1400px;
+    }
+  }
+
+  @media only screen and (max-width: 800px) {
+    width: 100%;
+    height: auto;
+
+    & .carousel-content {
+      display: flex;
+      flex-direction: column;
+
+      ${Content} {
+        width: 70%;
+        padding: 30px 0;
+      }
     }
   }
 `;
@@ -73,11 +94,31 @@ export const PhaseImg = styled.div`
       padding-bottom: 20px;
     }
   }
+
+  @media only screen and (max-width: 800px) {
+    width: 100%;
+    &.phase-three {
+      width: 100%;
+      height: 300px;
+    }
+  }
 `;
 
 export const ConceptImg = styled.img`
   width: 640px;
   height: auto;
+
+  @media only screen and (max-width: 800px) {
+    width: 100%;
+  }
+`;
+
+export const ArtistImg = styled.img`
+  width: 48%;
+
+  @media only screen and (max-width: 800px) {
+    width: 100%;
+  }
 `;
 
 export const ColumnTwo = styled.div`
@@ -87,7 +128,7 @@ export const ColumnTwo = styled.div`
   align-items: ${(props) => (props.align ? props.align : "center")};
   justify-content: space-between;
 
-  @media screen and (max-width: 800px) {
+  @media only screen and (max-width: 800px) {
     flex-direction: column;
 
     & div.imgSpace {
@@ -142,6 +183,9 @@ export const TextDiv = styled.div`
   }
 
   @media only screen and (max-width: 500px) {
+    font-size: 12px;
+    width: 100%;
+
     & p.title,
     p.title-2.white,
     p.title-2 {
@@ -217,6 +261,7 @@ export const SectionTitle = styled.div`
   }
 
   @media screen and (max-width: 800px) {
+    width: 100%;
     padding-top: 0;
     text-align: center;
   }
