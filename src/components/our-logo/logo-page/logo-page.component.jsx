@@ -501,7 +501,9 @@ export const LogoPage = ({
         <Content>
           <Footer>
             <FooterLogo>
-              <Logo isStatic={true} />
+              <Link to="/" reloadDocument>
+                <Logo isStatic={true} />
+              </Link>
             </FooterLogo>
             <FooterMenu>
               <group>
