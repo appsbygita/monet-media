@@ -183,7 +183,7 @@ export const TextDiv = styled.div`
   }
 
   @media only screen and (max-width: 500px) {
-    font-size: 12px;
+    font-size: 14px;
     width: 100%;
 
     & p.title,
