@@ -768,7 +768,7 @@ function I() {
         n = min(a, l) * e,
         o = n / PX,
         c = min(2, max(devicePixelRatio ?? 1, 1));
-      c = c === 1.75 ? 1.5 : c;
+      c = c === 1.75 ? 1 : c;
       C && ((cnv.width = _W = a * c), (cnv.height = _H = l * c)),
         CTR(1, 0, 0, 1, 0, 0),
         BG(t),
