@@ -23,11 +23,11 @@ export const SocialLinks = () => {
         </a>
         <a
           className="a2"
-          href="mailto:info@monetmedia.ai"
+          href="mailto:hello@monet.media"
           target="_blank"
           rel="noreferrer"
         >
-          info@MonetMedia.ai
+          hello@monet.media
         </a>
       </links>
     </SocialLinksContainer>

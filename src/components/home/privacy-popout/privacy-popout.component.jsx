@@ -65,7 +65,7 @@ export const PrivacyPopout = ({ onPrivacyClick, className }) => {
           some of the website’s features. For example, you won’t be able to
           receive our Newsletter or contact us directly from the website. Users
           who are uncertain about what information is mandatory are welcome to
-          contact us via info@monetmedia.ai.
+          contact us via hello@monet.media.
         </p>
         <h4>Your rights:</h4>
         <p>
@@ -128,7 +128,7 @@ export const PrivacyPopout = ({ onPrivacyClick, className }) => {
           If you would like to contact us to understand more about this Policy
           or wish to contact us concerning any matter relating to individual
           rights and your Personal Information, you may send an email to
-          info@monetmedia.ai.
+          hello@monet.media.
         </p>
       </PopupContent>
     </DisplayContainer>
