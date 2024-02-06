@@ -15,11 +15,6 @@ const FeatureContainer = styled.div`
   }
 
   @media screen and (max-width: 1200px) {
-    width: 200px;
-    height: 310px;
-  }
-
-  @media screen and (max-width: 1100px) {
     width: 160px;
     height: 240px;
   }
