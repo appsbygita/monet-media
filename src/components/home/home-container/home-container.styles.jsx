@@ -101,6 +101,20 @@ export const Content = styled.div`
   }
 `;
 
+export const GradientBg = styled.div`
+  position: absolute;
+  z-index: 0;
+  width: 100vw;
+  height: 1000px;
+  background: linear-gradient(
+    24deg,
+    rgba(59, 62, 23, 1) 0%,
+    rgba(41, 15, 72, 1) 85%,
+    rgba(155, 80, 174, 0.7) 100%
+  );
+  mask: linear-gradient(black, black, transparent);
+`;
+
 export const ContentHero = styled.div`
   display: flex;
   flex-direction: column;
@@ -242,7 +256,12 @@ export const Row = styled.div`
   flex-direction: row;
   justify-content: ${(props) => (props.align ? props.align : "space-between")};
   padding: 30px 0;
+  margin: 0 auto;
+  max-width: 1500px;
 
+  &#approach-1 {
+    z-index: 1;
+  }
   @media screen and (max-width: 800px) {
     flex-direction: column;
     padding: 12px 0;
@@ -251,6 +270,23 @@ export const Row = styled.div`
     &#approach-1 {
       flex-direction: column-reverse;
     }
+  }
+`;
+
+export const FeaturesRow = styled.div`
+  display: flex;
+  flex-direction: row;
+  width: 90vw;
+  justify-content: space-between;
+  margin: 40px auto;
+  max-width: 1560px;
+
+  @media screen and (max-width: 800px) {
+    flex-direction: column;
+    width: 100%;
+    flex-wrap: wrap;
+    align-items: center;
+    row-gap: 20px;
   }
 `;
 

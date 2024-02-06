@@ -28,6 +28,8 @@ import {
   Navbar,
   LogoRowContainer,
   ContentHero,
+  FeaturesRow,
+  GradientBg,
 } from "./home-container.styles";
 import { TitleText, ContentText, Paragraph } from "../../text/text.styles";
 import { Spacer } from "../../spacer/spacer.styles";
@@ -38,6 +40,12 @@ import { useScreenSize } from "../../../utils/screen/screen";
 
 import { Logo } from "../logo/logo.component";
 import HomeImgTwo from "../../../assets/image/home-img-2.webp";
+
+import StrategyFeat from "../../../assets/features/strategy_feat.webp";
+import BrandFeat from "../../../assets/features/brand_feat.webp";
+import DesignFeat from "../../../assets/features/design_feat.webp";
+import WebFeat from "../../../assets/features/web_feat.webp";
+import AIFeat from "../../../assets/features/ai_feat.webp";
 
 import Cur8Logo from "../../../assets/logo/cur8.png";
 import SplashLogo from "../../../assets/logo/splash.png";
@@ -52,6 +60,7 @@ import OmniLogo from "../../../assets/logo/omni.png";
 import { Gallery } from "../../gallery/gallery.component";
 
 import Hamburger from "../../../assets/icons/hamburger.svg";
+import { FeatureImage } from "../feature-image/feature-image.component";
 
 export const HomeContainer = ({
   onMenuClick,
@@ -98,6 +107,7 @@ export const HomeContainer = ({
       </HeroSection>
 
       <DarkSection id="our-approach">
+        <GradientBg />
         <Content>
           <SectionTitle>
             <n>01.</n> <t>Our Approach</t>
@@ -105,19 +115,16 @@ export const HomeContainer = ({
           <Row id="approach-1">
             <Column>
               <ContentText className="body">
-                Monet Media <b>pioneers the intersection</b> of technology,
-                marketing, and creativity.
+                Welcome to
+                <br />
+                <b>Monet Media.</b>
               </ContentText>
               <Paragraph>
-                Our mission: revolutionize marketing campaigns with AI,
-                fostering an inclusive and rewarding creative ecosystem.
-                <br />
-                <br />
-                We blend advanced AI systems for captivating advertising content
-                that aligns with clients' objectives and complies with platforms
-                like Facebook, TikTok, LinkedIn, and more.
-                <br />
-                <br />
+                Where we blend strategic expertise, cutting-edge technology,
+                creative innovation, and seamless implementation. As a leading
+                marketing consultancy, we're committed to making exceptional
+                marketing solutions accessible to businesses of all sizes and
+                stages.
               </Paragraph>
               <Button onClick={onButtonClick}>Express Your Interest</Button>
             </Column>
@@ -127,6 +134,25 @@ export const HomeContainer = ({
               // src="https://drive.google.com/drive/u/0/folders/1ATWaCm2P6O2YYwby7vF27BfQwagaIySY"
             />
           </Row>
+        </Content>
+        <FeaturesRow>
+          <FeatureImage imgUrl={StrategyFeat}>
+            <b>Strategy</b> Development
+          </FeatureImage>
+          <FeatureImage imgUrl={BrandFeat}>
+            <b>Brand</b> Strategic
+          </FeatureImage>
+          <FeatureImage imgUrl={DesignFeat}>
+            <b>Design</b> Creative
+          </FeatureImage>
+          <FeatureImage imgUrl={WebFeat}>
+            <b>Web Brand</b> in Action
+          </FeatureImage>
+          <FeatureImage imgUrl={AIFeat}>
+            <b>AI & Automation</b> Efficient
+          </FeatureImage>
+        </FeaturesRow>
+        <Content>
           <Row>
             <HomeImage img={HomeImgTwo} />
             <Column>
@@ -135,15 +161,16 @@ export const HomeContainer = ({
                 fostering a vibrant community where everyone has a stake.
               </ContentText>
               <Paragraph>
-                At Monet Media, we leverage blockchain for data security,
-                sovereignty, and privacy, while maintaining marketing
-                effectiveness. Our rewarding system incentivizes participation
-                through Monet Tokens, delivering value to consumers, creators,
-                and public resources.
+                At Monet Media, our focus is on guiding your journey from
+                concept to market launch and beyond. We're here to empower
+                businesses like yours by providing the necessary talent and
+                skills to turn your ideas into impactful reality. Join us in
+                navigating the dynamic marketing landscape, and let Monet Media
+                be the catalyst for your sustained growth and success.
                 <br />
                 <br />
               </Paragraph>
-              <Button onClick={onButtonClick}>Express Your Interest</Button>
+              <Button onClick={onButtonClick}>Join Us</Button>
             </Column>
           </Row>
         </Content>
