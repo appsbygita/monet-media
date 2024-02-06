@@ -9,9 +9,29 @@ const FeatureContainer = styled.div`
   display: flex;
   flex-direction: column;
 
+  @media screen and (max-width: 1350px) {
+    width: 220px;
+    height: 340px;
+  }
+
+  @media screen and (max-width: 1200px) {
+    width: 200px;
+    height: 310px;
+  }
+
+  @media screen and (max-width: 1100px) {
+    width: 160px;
+    height: 240px;
+  }
+
+  @media screen and (max-width: 900px) {
+    width: 145px;
+    height: 220px;
+  }
+
   @media screen and (max-width: 560px) {
-    width: 80%;
-    height: 110vw;
+    width: 70%;
+    height: 100vw;
   }
 `;
 
@@ -32,6 +52,14 @@ const FeatureDesc = styled.div`
   align-items: center;
   background-color: #333333;
   flex-wrap: wrap;
+
+  @media screen and (max-width: 1100px) {
+    padding: 0 20px;
+  }
+
+  @media screen and (max-width: 900px) {
+    padding: 0 10px;
+  }
 `;
 
 const FeatureText = styled.p`
@@ -43,6 +71,10 @@ const FeatureText = styled.p`
   & b {
     font-weight: 800;
     color: #d2f950;
+  }
+
+  @media screen and (max-width: 1100px) {
+    font-size: 0.9rem;
   }
 `;
 

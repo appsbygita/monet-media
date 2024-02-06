@@ -200,6 +200,10 @@ export const Column = styled.div`
   width: ${(props) => (props.width ? props.width : "55%")};
   flex-direction: column;
 
+  @media screen and (max-width: 1200px) {
+    width: ${(props) => (props.width ? props.width : "50%")};
+  }
+
   @media screen and (max-width: 800px) {
     width: 100%;
     margin: 0 auto;
