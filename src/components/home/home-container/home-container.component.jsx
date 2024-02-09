@@ -115,16 +115,19 @@ export const HomeContainer = ({
           <Row id="approach-1">
             <Column>
               <ContentText className="body">
-                Welcome to
-                <br />
-                <b>Monet Media.</b>
+                Monet Media <b>pioneers the intersection</b> of technology,
+                marketing, and creativity.
               </ContentText>
               <Paragraph>
-                Where we blend strategic expertise, cutting-edge technology,
-                creative innovation, and seamless implementation. As a leading
-                marketing consultancy, we're committed to making exceptional
-                marketing solutions accessible to businesses of all sizes and
-                stages.
+                Our mission: revolutionize marketing campaigns with AI,
+                fostering an inclusive and rewarding creative ecosystem.
+                <br />
+                <br />
+                We blend advanced AI systems for captivating advertising content
+                that aligns with clients' objectives and complies with platforms
+                like Facebook, TikTok, LinkedIn, and more.
+                <br />
+                <br />
               </Paragraph>
               <Button onClick={onButtonClick}>Express Your Interest</Button>
             </Column>
@@ -146,7 +149,8 @@ export const HomeContainer = ({
             <b>Design</b> Creative
           </FeatureImage>
           <FeatureImage imgUrl={WebFeat}>
-            <b>Web Brand</b> in Action
+            <b>Web</b> <br />
+            Brand in Action
           </FeatureImage>
           <FeatureImage imgUrl={AIFeat}>
             <b>AI & Automation</b> Efficient
@@ -157,10 +161,16 @@ export const HomeContainer = ({
             <HomeImage img={HomeImgTwo} />
             <Column>
               <ContentText className="body">
-                Join us as we <b>reshape the future</b> of creative content,
-                fostering a vibrant community where everyone has a stake.
+                Welcome to <b>Monet Media</b>, where we blend strategic
+                expertise, cutting-edge technology, creative innovation, and
+                seamless implementation.
               </ContentText>
               <Paragraph>
+                As a leading marketing consultancy, we're committed to making
+                exceptional marketing solutions accessible to businesses of all
+                sizes and stages.
+                <br />
+                <br />
                 At Monet Media, our focus is on guiding your journey from
                 concept to market launch and beyond. We're here to empower
                 businesses like yours by providing the necessary talent and
