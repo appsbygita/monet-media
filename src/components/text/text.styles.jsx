@@ -23,7 +23,7 @@ export const TitleText = styled.span`
 export const ContentText = styled.span`
   font-weight: 300;
   font-family: "Unbounded", sans-serif;
-  font-size: 3rem;
+  font-size: ${(props) => (props.fontSize ? props.fontSize : "3rem")};
   color: #fff;
 
   & b {

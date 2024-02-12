@@ -114,7 +114,7 @@ export const HomeContainer = ({
           </SectionTitle>
           <Row id="approach-1">
             <Column>
-              <ContentText className="body">
+              <ContentText className="body" fontSize="2.9rem">
                 Monet Media <b>pioneers the intersection</b> of technology,
                 marketing, and creativity.
               </ContentText>
@@ -160,7 +160,7 @@ export const HomeContainer = ({
           <Row>
             <HomeImage img={HomeImgTwo} />
             <Column>
-              <ContentText className="body">
+              <ContentText className="body" fontSize="2.2rem">
                 Welcome to <b>Monet Media</b>, where we blend strategic
                 expertise, cutting-edge technology, creative innovation, and
                 seamless implementation.
