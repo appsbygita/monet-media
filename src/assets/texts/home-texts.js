@@ -6,18 +6,18 @@ export const homeTexts = {
   ),
   textHeader1: (
     <>
-      Monet Media <b>pioneers the intersection</b> of technology, marketing, and
+      Monet Media <b>pioneering the intersection</b> of technology, marketing, and
       creativity.
     </>
   ),
   textParagraph1: (
     <>
-      Our mission: revolutionize marketing campaigns with AI, fostering an
-      inclusive and rewarding creative ecosystem.
+      Our mission: revolutionise marketing campaigns with strategic and recursive intelligence whilst fostering a fair and
+      inclusive creative ecosystem.
       <br />
       <br />
-      We blend advanced AI systems for captivating advertising content that
-      aligns with clients' objectives and complies with platforms like Facebook,
+      We blend advanced AI systems to develop and optimise captivating advertising content that
+      aligns with client objectives and delivers value through leading platforms like Facebook,
       TikTok, LinkedIn, and more.
       <br />
       <br />
@@ -31,15 +31,15 @@ export const homeTexts = {
   ),
   textParagraph2: (
     <>
-      As a leading marketing consultancy, we're committed to making exceptional
-      marketing solutions accessible to businesses of all sizes and stages.
+      As a leading-edge marketing consultancy, we're committed to delivering exceptional
+      marketing solutions to businesses of all sizes and stages.
       <br />
       <br />
-      At Monet Media, our focus is on guiding your journey from concept to
-      market launch and beyond. We're here to empower businesses like yours by
-      providing the necessary talent and skills to turn your ideas into
-      impactful reality. Join us in navigating the dynamic marketing landscape,
-      and let Monet Media be the catalyst for your sustained growth and success.
+      At Monet Media, our focus is on guiding your journey from campaign concept to
+       launch and beyond. We're here to empower your business by
+      providing the talent and skills to transform your offering into
+      impactful results. Join us to map and navigate your marketing landscape,
+      and let Monet Media catalyze your sustained growth and success.
       <br />
       <br />
     </>
@@ -74,12 +74,12 @@ export const homeTexts = {
   ),
   textParagraph3: (
     <>
-      Monet Media empowers creativity through a robust reward system backed by
-      blockchain. Our AI system sources content from artists, writers, and
-      public resources.
+      Monet Media is developing a robust reward system backed by
+      blockchain. Sourcing content from artists, writers, and
+      public resources we aim to acknowledge and fairly reward contributions.
       <br />
       <br />
-      Each contribution is meticulously tracked, attributed, and forms the basis
+      In our system design, each contribution is meticulously tracked, attributed, and forms the basis
       for our transparent reward distribution.
       <br />
       <br />
